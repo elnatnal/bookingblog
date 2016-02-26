@@ -113,6 +113,8 @@ header{
         border-bottom: 1px solid #E6E6E6;
         height:60px;
         background-color: #fff;
+        width: 100%;
+        position: relative;
 }
 
 .logo-block{
@@ -162,6 +164,7 @@ header{
         list-style-type: none;
         margin: 20px 8px 0 0;
         padding: 0;
+        position:relative;
 }
 
 .nav__item{
@@ -206,15 +209,24 @@ article{
 
     .banner-bottom{
         display: block;
-        width: 100%;
+/*        width: 100%;*/
         background:#02214C;
         text-align:center;
         position: relative;
         Font-family: Lato, sans-serif;
         color:#fff;
         font-size: 1.5rem;
-        padding: 5px 20px 20px 20px;
+        margin: 0;
+        padding: 2rem 0;
     }
+
+.banner-bottom h2{
+    margin: 0;
+}
+
+.banner-bottom p{
+    margin:1rem;
+}
 
     .banner-bottom__link{
         text-decoration: none;
@@ -235,30 +247,40 @@ article{
     }
     .booking-about{
         display: inline-block;
-        padding: 40px 40px 40px 40px;
+        padding: 2rem 0 0 2rem;
         box-sizing: border-box;
         max-width: 49%;
         Font-family: Lato, sans-serif;
         color:#707B87;
         font-size: 1rem;
+        float:left;
+        text-align: left;
     }
 
     .get-in-touch{
         display: inline-block;
-        padding: 15px 40px 0 40px;
+        padding: 15px 0 0 40px;
         box-sizing: border-box;
         color:#707B87;
+        float: left;
+        text-align: left;
+        max-width: 49%
     }
 
     .get-in-touch p{
         font-size: 0,8rem;
+        margin: 0l
     }
 
     .get-in-touch h5{
         font-size: 1rem;
         color: #000;
+        margin: 1.5rem 0 1rem 0 ;
     }
 
+.social-icons{
+    margin: 0 0 1rem 0;
+}
 
     .social-icons__item {
         display:inline-block;
@@ -281,8 +303,10 @@ article{
 
 
     footer{
-        background: white;
+        background: #fff;
         display:inline-block;
+        width: 90%;
+        height: auto;
 
     }
 
@@ -297,6 +321,10 @@ article{
 
     .booking-about{
         padding: 40px 40px 0 40px;
+    }
+    
+     .get-in-touch{
+        max-width: 100%
     }
 }
 
