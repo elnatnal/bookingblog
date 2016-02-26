@@ -80,10 +80,6 @@ div > h1 {
 	padding: 10px 0;
 }
 
-div {
-	display: none;
-}
-
 .section {
    	margin-bottom: 4rem;
  	padding-top: 1rem;
@@ -187,6 +183,21 @@ header{
 	cursor: pointer;
 } 
 /* ---------- HEADER.INC styles -- END  --------------- */
+
+/* ---------- ARTICLE-POST.INC styles -- BEGIN  --------------- */
+
+article{
+	display:block;
+}
+
+
+
+/* ---------- ARTICLE-POST.INC styles -- END  --------------- */
+
+
+
+
+
 
 /* ---------- FOOTER.INC styles -- BEGIN  --------------- */
     footer {

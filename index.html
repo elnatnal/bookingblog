@@ -62,12 +62,11 @@ Index layout consists of "Word cloud" category, "Latest posts" and "Most Popular
         - Posts
                 -- Latest
                 -- Most Popular (same design)
--->
 
 <div class="this_is_a_clas">
-	STUFF 
+        STUFF
 </div>
-
+-->
 
 
 <!--
@@ -82,12 +81,12 @@ Article List is the categorized list of all blog articles under a certain, or al
 	- List Sidebar
 		-- All categories
 		-- Tags?
--->
+
 
 <div class="this_is_a_clas">
-	ARTICLE EVENT ARTICLE EVENT
-</div> 
-
+        ARTICLE EVENT ARTICLE EVENT
+</div>
+-->
 
 <!-- 
 
@@ -101,11 +100,12 @@ The author page is where the author has a biography with a list of their article
 	- List of articles the author has written
 	- List of speaking gigs this author has participated in
 
--->
-
 <div class="this_is_a_clas">
         AUTHOR AUTHOR AUTHOR
 </div>
+
+-->
+
 
 <!--
 
@@ -124,11 +124,11 @@ ng gigs, etc. A one stop shop for everything the author has. This layout consist
 		-- Title of Talk
 		-- Brief content
 
--->
-
 <div class="this_is_a_clas">
         EVENT EVENT EVENT EVENT
 </div>
+
+-->
 
 
 
@@ -150,13 +150,241 @@ The Article Page is the bread and butter of the blog. This is where the content 
 			-- small desc. w/ link
 			-- social
 -->
+<aside class="d5-d6">
+	<img src="#" class="article__aside__author--photo">
+	<p class="article__aside__author--blurb">
+	
+	</p>
+	<div class="article__aside__author--social">
+	
+	</div>
 
-<div class="this_is_a_clas">
-        EVENT EVENT EVENT EVENT
+</aside>
+
+<article class="d1-d4">
+	<header> 
+    		<h1 class="article__title">
+			How We Spent Two Days Making Perl Faster
+		</h1>
+                
+		<div class="post_meta">
+                	<a class="post_author" href="http://blog.booking.com/author/eric-herman.html">Eric Herman</a><br/>
+                        <time data-icon="%">Fri 22 May 2015</time>
+                </div>
+  	</header>
+
+	<p>This is a story about a significant new optimization to the Perl
+	interpreter. It is a story about battling code complexity. And it is a
+	story about wanting to have our cake and eat it too.</p>
+
+	<p>A recent Booking.com hackathon provided us the opportunity to
+	investigate speeding up integer allocation in the Perl interpreter. If
+	successful, this could optimize nearly every program we run. We
+	discovered that a naive implementation <em>could</em> work, but would make the
+	code a lot more difficult to maintain. Our path lead us to attempt to
+	leverage the C preprocessor to improve code clarity while opening doors
+	to real gains in program execution speed.</p>
+
+	<h2>First, some background</h2>
+	<p>As described in <a href="http://perldoc.perl.org/perlguts.html" title="perlguts">perlguts</a> and <a href="http://cpansearch.Perl.org/src/RURBAN/illguts-0.49/index.html" title="PerlGuts Illustrated">PerlGuts Illustrated</a>, representations of variables in Perl are usually composed of two parts: a <em>head</em> struct and (optionally) a <em>body</em> struct.
+	The <em>head</em> contains the essential &ldquo;internal book-keeping&rdquo;
+	common to all variables (regardless of type) including a pointer to the
+	(optional) <em>body</em> struct. Below is an image of the layout of fields in a
+	<em>head</em> struct as depicted in <em>PerlGuts Illustrated</em>:</p>
+	<p><center><img
+	  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svhead.png"
+	  alt="SV Head (PerlGuts Illustrated)"></center></p>
+	
+	<p>The <em>body</em> struct can be quite different, depending upon the type of the
+	variable. The most simple type of variable is the <code>SvNULL</code>, which
+	represents <code>undef</code> and does not need a body struct at all.</p>
+
+	<p>A string (called <code>PV</code> for &ldquo;pointer value&rdquo;) has a body type of <code>XPV</code>:</p>
+
+	<p><center><img
+	  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svpv-14.png"
+	  alt="SvPV (PerlGuts Illustrated)"></center></p>
+	
+	<p>But the body struct of a <code>PV</code> is different to a body struct of a <code>PVNV</code>.
+	A <code>PVNV</code> can hold a floating point number and a string representation of
+that same value:</p>
+<p><center><img
+  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svpvnv-14.png"
+  alt="SvPVNV (PerlGuts Illustrated)"></center></p>
+<p>One benefit of this type of design is that all references to the value
+point to the memory location of the <em>head</em>. As such, Perl is free to
+change which memory is being used to represent a value by changing the
+<em>body</em> struct, without having to update any pointer except the pointer
+contained within the <em>head</em>.</p>
+<h2>Changing types</h2>
+<p>Naturally, Perl has an internal function to convert between types of
+variable. This function is <code>sv_upgrade</code> (&ldquo;scalar value
+upgrade&rdquo;). In essence, whenever we have a variable of some type in
+Perl (for example, a simple integer) and we need to access it as a
+different type (for example, a string), the <code>sv_upgrade</code> will convert
+the type of the variable (for example, into a type that contains both
+integer and string representations of a value). This change may involve
+replacing the body struct with a larger struct.</p>
+<p>To see how <code>sv_upgrade</code> is implemented, we can look at the
+<code>Perl_sv_upgrade</code> function in <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1203" title="sv.c Perl_sv_upgrade"><code>sv.c</code></a>. We see that this function encapsulates a lot
+of complexity. There are many comments, which describe subtle corner
+cases. Since it can take a scalar value of essentially any type and
+convert it to something capable of representing any other type, perhaps
+it&rsquo;s unsurprising that there&rsquo;s a lot of code here.</p>
+<p>Without going line-by-line, an overview of how this function is
+implemented may be useful. First, there is a <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1272" title="sv.c Perl_sv_upgrade first switch"><code>switch</code></a> based on the current type of
+variable, to determine what it needs for the new type. Shortly
+thereafter, there is a <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1330" title="sv.c Perl_sv_upgrade second switch">second <code>switch</code></a> based on the new type. Inside of
+the second <code>switch</code> block, there are numerous <code>if</code> blocks for doing
+different things depending on the old type. Finally, after the new body
+struct has been set up, and the head struct contains all the correct
+flags, the memory used by the old body is freed.</p>
+<p>Still with me? Good.</p>
+<h2>A naive optimization</h2>
+<p>The <code>sv_upgrade</code> function is called from a number of places. Not only is
+it called in places such as printing integers as strings, but it&rsquo;s
+also called when assigning an integer value to a previously cleared
+variable.</p>
+<p>A previously cleared variable is always an <code>undef</code> with no body struct.
+The reason <code>sv_upgrade</code> is called is to allow the correct setup for the
+body to occur. This was a very sensible design decision, as it
+centralizes a lot of &ldquo;internal book-keeping&rdquo; behavior,
+rather than duplicating it. The cost of this centralization is
+performance: some generic (and in this case superfluous) code is
+executed. For example, when creating a new integer, <code>sv_upgrade</code> will
+run an unnecessary check for a conversion of a larger type to a smaller
+type.</p>
+<p>Integer assignment to a cleared variable occurs so frequently that one
+would imagine it might be worth duplicating the required complexity to
+achieve the performance improvement. Thus we decided to evaluate that
+trade-off for integer allocation. After a review of the nearly 300 lines
+of <code>sv_upgrade</code> internals, we saw that we could remove the call entirely
+if we could &ldquo;hoist out&rdquo; just the essential <strong>two lines</strong> of
+code! However, there is a very good reason this had not been done
+before. Let's look at the two lines.</p>
+<p>The first line (since we know the new type) is easy:</p>
+<div class="codehilite"><pre><span></span>SvFLAGS(sv) |= new_type;
+</pre></div>
+
+
+<p>But the other line is quite complex:</p>
+<div class="codehilite"><pre><span></span>SvANY(sv) = (XPVIV*)((char*)&amp;(sv-&gt;sv_u.svu_iv) - STRUCT_OFFSET(XPVIV, xiv_iv));
+</pre></div>
+
+
+<p>If your head is swimming after looking at that last line of code,
+don&rsquo;t worry: you&rsquo;re in good company. Granted, this is
+described in <em>Illustrated perlguts</em>:</p>
+<blockquote>
+<p>Since 5.10 for a raw IV (without PV) the IVX slot is in the HEAD,
+there is no xpviv struct ("body") allocated. The SvIVX macro abuses
+SvANY pointer arithmethic <!-- [sic] --> to point to a compile-time
+calculated negative offset from HEAD-1 to sv_u.svu_iv, so that PVIV
+and IV can use the same SvIVX macro.</p>
+</blockquote>
+<p>But, even once I thought I maybe understood what that complex line of
+code supposedly did, I made <a href="https://metacpan.org/author/SMUELLER">Steffen</a> patiently sit for more than 15
+minutes as I convinced myself with paper and pencil that it actually did
+what he had described. After that, the drawing from Illustrated Perl
+Guts made more sense to me:</p>
+<p><center><img
+  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/sviv-14.png"
+  alt="Bodyless SVIV (PerlGuts Illustrated)"></center></p>
+<p>What&rsquo;s more, I finally understood that <em>this</em> complexity exists in
+order to avoid executing an <code>if</code> statement that would otherwise be
+called every time the value is retrieved!</p>
+<p>Thus, the previous design trade-offs seemed like the right ones. Yes,
+we could make Perl faster, but at the cost of leaking a lot of
+complexity into another part of the code. That complexity would make any
+additional development much more difficult in any future work.</p>
+<h2>Having our cake and eating it too</h2>
+<!-- Could we contain that hairy bit of code in a hairnet? -->
+
+<!-- If we simply created a function, we would risk adding some small
+overhead that comes with calling a function. -->
+
+<!-- A bigger
+discussion about linkers and whether or not this will be optimized away
+by a compiler. -->
+
+<p>We wanted to encapsulate that very complex bit of code, but without any
+added runtime performance cost. Since this is C, we looked at using the
+preprocessor to push the complexity behind a macro, in much the same way
+that with other languages we might move some hairy lines of code behind
+a well named function or method:</p>
+<div class="codehilite"><pre><span></span>#define SET_SVANY_FOR_BODYLESS_IV(sv) \
+    SvANY(sv) = (XPVIV*)((char*)&amp;(sv-&gt;sv_u.svu_iv) - STRUCT_OFFSET(XPVIV, xiv_iv))
+</pre></div>
+
+
+<p>And, of course, the advantage of using a macro (rather than a function)
+is that the cost is paid entirely at compile time, and thus there is
+zero additional runtime performance lost.</p>
+<p>By <a href="http://perl5.git.perl.org/perl.git/patch/dc6369efc01b79eb657ea176c81cab927b54a2d1" title="Refactor bodyless-IV/NV hacks into define">introducing the macro</a>, the readability of the
+code would be improved in several places.</p>
+<p>So, how did this change our situation? With the macro, the two lines we
+wanted to &ldquo;hoist out&rdquo; looked a lot less complex. All we
+would need would be a <a href="http://perl5.git.perl.org/perl.git/patch/de06ff5a50f29eaee3e72394fa1c2417689cac47" title="Speed up assigning an IV to a previously cleared SV">patch</a> which replaces
+this one computationally heavy function call:</p>
+<div class="codehilite"><pre><span></span>sv_upgrade(dstr, SVt_IV);
+</pre></div>
+
+
+<p>with just these two lines:</p>
+<div class="codehilite"><pre><span></span>SET_SVANY_FOR_BODYLESS_IV(dstr);
+SvFLAGS(dstr) |= SVt_IV;
+</pre></div>
+
+
+<p>By factoring the complexity differently, we opened the doors to a
+different set of performance/complexity cost trade-offs. We would leak
+only a small amount of complexity relative to the gain in performance.
+But is it worth it? With these changes, the cost would be low, but what
+would the actual benefit be?</p>
+<h2>Measuring the gain</h2>
+<p>The micro-benchmark we used is very heavy on exercising one particular
+code path, however it is a common code path.</p>
+<div class="codehilite"><pre><span></span>  <span class="nv">$</span> <span class="nv">dumbbench</span> <span class="o">-</span><span class="n">i50</span> <span class="o">--</span><span class="n">pin</span><span class="o">-</span><span class="n">frequency</span> <span class="o">--</span> <span class="o">\</span>
+    <span class="o">./</span><span class="n">perl</span> <span class="o">-</span><span class="n">Ilib</span> <span class="o">-</span><span class="n">e</span> <span class="o">\</span>
+    <span class="s">&#39;for my $x (1..1000){my @a = (1..2000);}&#39;</span>
+</pre></div>
+
+
+<p>Here are the results of the micro-benchmark before the optimization:</p>
+<div class="codehilite"><pre><span></span>  Rounded run time per iteration: 2.4311e-01 +/- 1.4e-04
+</pre></div>
+
+
+<p>And here are the results after the optimization:</p>
+<div class="codehilite"><pre><span></span>  Rounded run time per iteration: 1.99354e-01 +/- 5.5e-05
+</pre></div>
+
+
+<p>That&rsquo;s 18% faster.</p>
+<h2>Results</h2>
+<p>Overall, this hackathon project was a success.</p>
+<p>With these measurements, we demonstrated that the optimization was
+worthwhile. The complexity cost is pretty close to zero: in some places
+the Perl core is <em>slightly</em> more complex, but the internals of
+<code>sv_upgrade</code> are certainly more clear.<!-- The values of the earlier
+design decisions were respected (containing complexity) and new
+performance wins have been achieved.--> Additionally, we found there
+were other similar potential optimizations that could leverage the same
+technique. In the end, five related patches were pushed to Perl:</p>
+<ul>
+<li><a href="http://perl5.git.perl.org/perl.git/commit/dc6369efc01b79eb657ea176c81cab927b54a2d1">Refactor bodyless-IV/NV hacks into define</a></li>
+<li><a href="http://perl5.git.perl.org/perl.git/commit/de06ff5a50f29eaee3e72394fa1c2417689cac47">Speed up assigning an IV to a previously cleared SV</a></li>
+<li><a href="http://perl5.git.perl.org/perl.git/commit/bd30fe8921c88e4677c2279b442a56a11ae037b4">Speed up newSViv()</a></li>
+<li><a href="http://perl5.git.perl.org/perl.git/commit/4d55d9ac67bf8bc58f3fc9563b082459c6a3c22b">Repeat newSViv optimization for newSVuv</a></li>
+<li><a href="http://perl5.git.perl.org/perl.git/commit/7777302a0051987e602dfe05c34b52adf18cc9f0">Attempt to bring newSViv/uv optimization to newRV</a></li>
+</ul>
+<p>When Perl 5.22 ships, in part because of this work, many real-world
+programs will be faster.</p>
+  </div>
+</article>
 </div>
 
 
-</div>
 </div>
 
 
