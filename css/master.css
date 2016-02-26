@@ -254,6 +254,11 @@ article {
 
 .article__aside__author h4{
     color:#0896FF;
+    margin-bottom: 1rem;
+}
+
+.article__aside__author h5{
+    margin: 0 0 1rem 0;
 }
 
 
@@ -266,6 +271,13 @@ article {
     color:#707B87;
     float: left;
     margin-right: 1rem;
+    line-height: .75rem;
+}
+
+.article__aside__author--social__icons__item:hover 
+{
+    background: #0896FF;
+    color:#fff;
 }
 
 /* ---------- ARTICLE-POST.INC styles -- END  --------------- */
