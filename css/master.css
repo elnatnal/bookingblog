@@ -11,18 +11,21 @@ html, body, p, div, div {
 }
 
 body {
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: "Lato", "Open Sans", Helvetica, sans-serif;
 	color: #333;
 	text-align: center;
 	padding-top: 40px;
 	line-height: 1;
+	background:#F2F4F6;
+	font-size:16px;
 }
 
 .wrapper {
 	margin: 0 auto;
 	width: 90%;
 	float: none;
-	padding-top: 2.5em;
+	padding-top: 2.5rem;
+	background:#fff;
 }
 
 div {
@@ -35,9 +38,9 @@ div {
 }
 
 div > h1 {
-      	margin: -2.5em 0 2em;
+      	margin: -2.5rem 0 2rem;
      	font-size: 24px;
-	padding-top: 0.5em;
+	padding-top: 0.5rem;
 }
 
 .box {
@@ -83,8 +86,8 @@ div {
 }
 
 .section {
-   	margin-bottom: 4em;
- 	padding-top: 1em;
+   	margin-bottom: 4rem;
+ 	padding-top: 1rem;
 }
 
 .wrapper {
@@ -145,7 +148,6 @@ header{
 
 .booking__logo__tech-blog{
         position: relative;
-        font-family: Lato;
         color:707B87;
         border-left: 2px solid #AAAAAA;
         padding-left: 13px;
@@ -157,7 +159,6 @@ header{
 
 
 .nav{
-        font-family: Lato;
         float:right;
         list-style-type: none;
         margin: 20px 8px 0 0;
@@ -185,17 +186,7 @@ header{
 /* ---------- HEADER.INC styles -- END  --------------- */
 
 /* ---------- FOOTER.INC styles -- BEGIN  --------------- */
-    body{
-        margin:0 auto;
-        padding:0;
-        background: #F2F4F6;
-    }
-
     footer {
-        background: #fff;
-        display: table !important;
-        max-width: 90%;
-        margin: 0 auto;
         border: 1px solid #E6E6E6;
     }
 
@@ -241,17 +232,14 @@ header{
         display: inline-block;
         padding: 15px 40px 0 40px;
         box-sizing: border-box;
-        font-family: Lato, sans-serif;
         color:#707B87;
     }
 
     .get-in-touch p{
-        font-family: Lato;
         font-size: 0,8rem;
     }
 
     .get-in-touch h5{
-        font-family: Lato, sans-serif;
         font-size: 1rem;
         color: #000;
     }
