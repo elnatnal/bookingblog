@@ -14,7 +14,7 @@ body {
 	font-family: "Lato", "Open Sans", Helvetica, sans-serif;
 	color: #333;
 	text-align: center;
-	line-height: 1;
+	line-height: 1.5;
 	background:#F2F4F6;
 	font-size:16px;
 }
@@ -58,9 +58,8 @@ div > h1 {
 	*left: -1px;
 }
 
-p {
-  	margin: 0;
-	font-size: .9rem;
+p{
+	margin:0 0 1rem 0;
 }
 
 .box[class*=pad] {
@@ -193,12 +192,15 @@ article {
 
 /* ---------- ARTICLE-POST.INC styles -- BEGIN  --------------- */
 
-article{
+.article{
 	display:block;
 	text-align:left;
 	padding:0rem 1rem;
 }
 
+.article p{
+	color:#506274;
+}
 .post__header{
 	display:block;
 	margin-bottom:2rem;
@@ -213,6 +215,7 @@ article{
 .post__header__title{
 	font-weight:800;
 	font-size:2.25rem;
+	line-height:1.1;
 	margin:0rem 0rem 1rem 0rem;
 }
 
@@ -228,8 +231,10 @@ article{
 }
 
 .post__lede{
-	font-size:1.75rem;
+	font-size:1.375rem;
 	display:block;
+	line-height:1.375;
+	margin-bottom:1.375rem;
 }
 
 .article__aside__author h4,h5,p {
@@ -273,7 +278,8 @@ article{
 /* ---------- FOOTER.INC styles -- BEGIN  --------------- */
     footer {
         border: 1px solid #E6E6E6;
-    }
+	padding-bottom:2rem;    
+}
 
     .banner-bottom{
         display: block;
