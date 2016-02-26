@@ -232,6 +232,37 @@ article{
 	display:block;
 }
 
+.article__aside__author h4,h5,p {
+    float: left;
+    text-align: left;
+    padding-right: 2rem;
+    
+}
+
+.article__aside__author--photo{
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+   
+}
+
+.article__aside__author h4{
+    color:#0896FF;
+}
+
+
+.article__aside__author--social__icons__item{
+    display: inline-block;
+    background: #EFF1F4;
+    border-radius: 50%;
+    padding: .7rem;
+    text-decoration: none;
+    color:#707B87;
+    float: left;
+    margin-right: 1rem;
+}
+
 /* ---------- ARTICLE-POST.INC styles -- END  --------------- */
 
 
