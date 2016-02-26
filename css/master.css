@@ -184,4 +184,118 @@ header{
 } 
 /* ---------- HEADER.INC styles -- END  --------------- */
 
+/* ---------- FOOTER.INC styles -- BEGIN  --------------- */
+    body{
+        margin:0 auto;
+        padding:0;
+        background: #F2F4F6;
+    }
 
+    footer {
+        background: #fff;
+        display: table !important;
+        max-width: 90%;
+        margin: 0 auto;
+        border: 1px solid #E6E6E6;
+    }
+
+    .banner-bottom{
+        display: block;
+        background:#02214C;
+        text-align:center;
+        position: relative;
+        Font-family: Lato, sans-serif;
+        color:#fff;
+        font-size: 1.5rem;
+        padding: 5px 20px 20px 20px;
+    }
+
+    .banner-bottom__link{
+        text-decoration: none;
+        color:#0896FF;
+    }
+
+    .booking__logo-footer {
+        display:inline-block;
+        position: relative;
+        text-indent: 150%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: url("img/Logo_Booking.com_rgb.png");
+        background-image: url("img/Logo_Booking.com_rgb.svg");
+        background-repeat: no-repeat;
+        height:32px;
+        width:192px;
+    }
+    .booking-about{
+        display: inline-block;
+        padding: 40px 40px 40px 40px;
+        box-sizing: border-box;
+        max-width: 49%;
+        Font-family: Lato, sans-serif;
+        color:#707B87;
+        font-size: 1rem;
+    }
+
+    .get-in-touch{
+        display: inline-block;
+        padding: 15px 40px 0 40px;
+        box-sizing: border-box;
+        font-family: Lato, sans-serif;
+        color:#707B87;
+    }
+
+    .get-in-touch p{
+        font-family: Lato;
+        font-size: 0,8rem;
+    }
+
+    .get-in-touch h5{
+        font-family: Lato, sans-serif;
+        font-size: 1rem;
+        color: #000;
+    }
+
+
+    .social-icons__item {
+        display:inline-block;
+        position: relative;
+        background-color:#EFF1F4;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        height:40px;
+        width:40px;
+        text-align:center;
+        margin-right: 20px;
+
+    }
+    .social-icons__item:hover circle{
+       fill: #0896FF;
+    }
+    .social-icons__item:hover path{
+       fill: #fff;
+    }
+
+
+    footer{
+        background: white;
+        display:inline-block;
+
+    }
+
+@media screen and (max-width: 480px) {
+    .booking-about {
+        max-width: 100%;
+    }
+
+     .get-in-touch{
+        padding: 0 40px 40px 40px;
+    }
+
+    .booking-about{
+        padding: 40px 40px 0 40px;
+    }
+}
+
+
+/* ---------- FOOTER.INC styles -- END --------------- */
