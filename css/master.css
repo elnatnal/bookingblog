@@ -109,7 +109,79 @@ div {
 /* Reset -- END */
 
 
+/* ---------- HEADER.INC styles -- BEGIN  --------------- */
+
+header{
+        border-bottom: 1px solid #E6E6E6;
+        height:60px;
+}
+
+.logo-block{
+        text-decoration: none;
+        display:inline-block;
+        color: #707B87;
+        padding-top: 12px;
+        width: auto;
+}
+
+.booking__logo {
+        display:inline-block;
+        position: relative;
+        text-indent: 150%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: url("img/Logo_Booking.com_rgb.png");
+        background-image: url("img/Logo_Booking.com_rgb.svg");
+        background-repeat: no-repeat;
+        height:32px;
+        width:192px;
+        margin: 0 0 0 20px;
+        top: 5px;
+}
+
+.booking__logo a{
+        text-decoration: none;
+}
+
+.booking__logo__tech-blog{
+        position: relative;
+        font-family: Lato;
+        color:707B87;
+        border-left: 2px solid #AAAAAA;
+        padding-left: 13px;
+        display: inline;
+        height: 32px;
+        top: -6px;
+        margin-left: 12px;
+}
 
 
+.nav{
+        font-family: Lato;
+        float:right;
+        list-style-type: none;
+        margin: 20px 8px 0 0;
+        padding: 0;
+}
+
+.nav__item{
+        display:inline-block;
+        height: 60px;
+}
+
+.nav a{
+        color: #707B87;
+        padding: 20px 12px;
+        width: 100%;
+        height:100%;
+        text-align: center;
+}
+
+.nav__item--active a, .nav__item a:hover{
+       	background: #F2F4F6;
+       	border-bottom: 2px solid #0896FF;
+	cursor: pointer;
+} 
+/* ---------- HEADER.INC styles -- END  --------------- */
 
 
