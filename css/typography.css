@@ -1,0 +1,328 @@
+/**
+ *
+ * =======================================================================
+   Base Type
+ * =======================================================================
+ *
+ */
+
+html {
+  font: normal 112.5%/1.65 serif; /* base font size 18px with 1.65 line-height */
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  color: #444444;
+}
+
+
+
+/**
+ *
+ * =======================================================================
+   Headings
+ * =======================================================================
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin-top: 0;
+  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  color: #222222;
+}
+
+
+/**
+* Extend included classes on any element of your
+* choosing for adjusting type based on the scale
+* provided.
+
+* For example:
+
+ <h6 class="typl8-giga">Awesome Headline</h6>
+ <p class="typl8-tera">a story about a dude</p>
+
+* Our Type Scale is as follows with px fallbacks
+* for IE 6-8 as they do not understand REM units.
+*
+* 18, 21, 24, 36, 48, 60, 72, 90, 117
+*
+*
+* Explanation:
+* margin-bottom = ( base font-size * base line-height ) / current font-size
+*
+* Makes sure that there's always one unit of measure's worth of space between shit
+* for headings. This is better than spacing using line-height because of the wrapping issue where we have
+* wrapping onto 2 lines with a high line-height.
+ */
+
+h1{
+  font-size: 60px;
+  font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+}
+
+h2{
+  font-size: 48px;
+  font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+}
+
+h3{
+  font-size: 36px;
+  font-size: 2rem; /* 36 / 18 = 2 */
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+}
+
+h4{
+  font-size: 24px;
+  font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+}
+
+h5{
+  font-size: 21px;
+  font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+}
+
+h6{
+  font-size: 18px;
+  font-size: 1rem; /* 18 = 18 × 1 */
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+}
+
+
+/**
+ *
+ * =======================================================================
+   Paragraphs and Indentation
+ * =======================================================================
+ */
+
+p {
+  margin: auto auto 1.5em; /* bottom margin for paragraphs */
+}
+
+p + p {
+  text-indent: 1.5em; /* indent subsequent paragraphs */
+  margin-top: -1.5em; /* no top margin on subsequent paragraphs */
+}
+
+
+/**
+ *
+ * =======================================================================
+   Hyphens
+ * =======================================================================
+ */
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  /* Accepted values: [ none | manual | auto ] */ /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+
+/**
+ *
+ * =======================================================================
+   Code Blocks
+ * =======================================================================
+ */
+
+pre code {
+  word-wrap: normal;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+pre {
+  white-space: pre;
+}
+
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+
+/**
+ *
+ * =======================================================================
+ * Abbreviations Markup
+ * Extend this object into your markup
+
+  <abbr title="hyper text markup language">HMTL</abbr>
+
+ * Extend this object into your markup.
+ * =======================================================================
+ */
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+
+abbr[title]:hover {
+  cursor: help; /* cursor changed to a question mark when it has a title */
+}
+
+
+/**
+ *
+ * =======================================================================
+   Blockquotes
+ * =======================================================================
+ */
+
+/**
+ * Blockquote Markup
+ *
+  <figure>
+    <blockquote class="blockquote" cite="">
+      <p></p>
+    </blockquote>
+    <figcaption>
+      <cite>
+        <small><a href=""></a></small>
+      </cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+
+.blockquote p:last-of-type {
+  margin-bottom: -0.825em;
+}
+
+.blockquote + figcaption {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
+
+.blockquote + figcaption:before {
+  content: "-"; /* "-" is your citation flourish */
+}
+.small {
+  font-size:85%;
+}
+
+/**
+ *
+ * =======================================================================
+   Pull Quotes
+ * =======================================================================
+ */
+
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ */
+
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+.pull-quote:before,
+.pull-quote:after {
+  height: 1em;
+  opacity: 0.15;
+  position: absolute;
+  font-size: 4em;
+  color: #dc976e;
+}
+.pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+.pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+
+/**
+ *
+ * =======================================================================
+   Figures
+ * =======================================================================
+ */
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+
+
+/**
+ *
+ * =======================================================================
+   Foot Notes
+ * =======================================================================
+ */
+
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
