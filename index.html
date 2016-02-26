@@ -14,7 +14,7 @@
 <body>
 
 <!-- header.inc would BEGIN HERE -->
-<header>
+<header class="site__header">
        	<a href="booking.com" class="logo-block">
            	<h1 class="booking__logo">
                 	Booking.com
@@ -162,18 +162,15 @@ The Article Page is the bread and butter of the blog. This is where the content 
 </aside>
 
 <article class="d1-d4">
-	<header> 
-    		<h1 class="article__title">
+
+	<header class="post__header">
+		<div class="post__header__category">Design</div> 
+    		<h1 class="post__header__title">
 			How We Spent Two Days Making Perl Faster
 		</h1>
-                
-		<div class="post_meta">
-                	<a class="post_author" href="http://blog.booking.com/author/eric-herman.html">Eric Herman</a><br/>
-                        <time data-icon="%">Fri 22 May 2015</time>
-                </div>
   	</header>
 
-	<p>This is a story about a significant new optimization to the Perl
+	<p class="post__lede">This is a story about a significant new optimization to the Perl
 	interpreter. It is a story about battling code complexity. And it is a
 	story about wanting to have our cake and eat it too.</p>
 
