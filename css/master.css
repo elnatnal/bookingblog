@@ -130,9 +130,9 @@ header{
         text-indent: 150%;
         white-space: nowrap;
         overflow: hidden;
-        background-image: url("img/Logo_Booking.com_rgb.png");
-        background-image: url("img/Logo_Booking.com_rgb.svg");
-        background-repeat: no-repeat;
+        background-image: url("../img/Logo_Booking.com_rgb.png");
+        background-image: url("../img/Logo_Booking.com_rgb.svg");
+	background-repeat: no-repeat;
         height:32px;
         width:192px;
         margin: 0 0 0 20px;
@@ -221,8 +221,8 @@ header{
         text-indent: 150%;
         white-space: nowrap;
         overflow: hidden;
-        background-image: url("img/Logo_Booking.com_rgb.png");
-        background-image: url("img/Logo_Booking.com_rgb.svg");
+        background-image: url("../img/Logo_Booking.com_rgb.png");
+        background-image: url("../img/Logo_Booking.com_rgb.svg");
         background-repeat: no-repeat;
         height:32px;
         width:192px;
