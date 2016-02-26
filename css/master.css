@@ -26,6 +26,7 @@ body {
 	padding-top: 2.5rem;
 	background:#fff;
 	display:inline-block;
+    top:-4rem;
 }
 
 .wrapper__main-content{
@@ -189,6 +190,37 @@ article {
 	cursor: pointer;
 } 
 /* ---------- HEADER.INC styles -- END  --------------- */
+
+.overlay {
+    background-color: rgba(2, 36, 109, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.masthead{
+    background-image: url(../img/slide-1.png);
+    background-size: cover;
+    z-index: -100;
+    color:#fff;
+    padding: 20vh 0;
+    max-width: 100%;
+    margin: 0;
+}
+
+.masthead h2{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.masthead p{
+    font-size: 2rem;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
 
 /* ---------- ARTICLE-POST.INC styles -- BEGIN  --------------- */
 
