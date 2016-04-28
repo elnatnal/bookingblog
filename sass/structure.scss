@@ -39,6 +39,7 @@ a:hover,
 	background-color: rgba(#62B8EC, 1);
 	background-position: center;
 	background-size: 100%;
+	transition: 0.5s ease padding;
 
 }
 
@@ -195,6 +196,7 @@ a:hover,
 .bkbContentBanner {
 	padding: 40px;
 	background-color: rgba(#03173b, 1);
+	transition: 0.5s ease padding;
 }
 
 .bkbContentBanner h4,
