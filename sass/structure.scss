@@ -39,6 +39,7 @@ a:hover,
 	background-color: rgba(#62B8EC, 1);
 	background-position: center;
 	background-size: 100%;
+
 }
 
 .bkbSplash:after {
@@ -63,6 +64,7 @@ a:hover,
 .bkbSplash h2 {
 	margin-bottom: 10px;
 	font-size: 3em;
+	font-weight: 800;
 }
 
 .bkbSplash > strong {
@@ -103,7 +105,7 @@ a:hover,
 
 .bkbArticlePreview .bkbArticleTitle {
 	font-size: 2em;
-	font-weight: 800;
+	font-weight: 600;
 	color: rgba(#333333, 1);
 	margin-bottom: 5px;
 }
