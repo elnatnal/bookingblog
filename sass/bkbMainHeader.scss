@@ -3,9 +3,10 @@
 /******************************************************************************/
 .bkbMainHeader {
 	position: relative;
-	border-bottom: 1px solid rgba(#5E729E, 1);
 	background-color: rgba(#fff, 1);
 }
+
+.bkbMainHeader .wrapper {padding: 0;}
 
 .bkbMainHeader h1 {
 	padding: 15px;
