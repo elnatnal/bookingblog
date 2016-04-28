@@ -1,0 +1,38 @@
+/******************************************************************************/
+/* .bkbMainHeader.scss */
+/******************************************************************************/
+.bkbMainHeader {
+	border-bottom: 1px solid rgba(#5E729E, 1);
+	background-color: rgba(#fff, 1);
+}
+
+.bkbMainHeader h1 {
+	padding: 15px;
+	text-align: center;
+	border-bottom: 1px solid rgba(#5E729E, 1);
+}
+
+.bkbMainHeader h1 img {
+	height: 24px;
+}
+
+/******************************************************************************/
+/* .bkbMainNav */
+/******************************************************************************/
+.bkbMainNav a {
+	display: block;
+	padding: 15px;
+	border-bottom: 1px solid transparent;
+	color: rgba(#707B87, 1);
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.bkbMainNav a:hover,
+.bkbMainNav .active {
+	text-decoration: none;
+	color: rgba(#62B8EC, 1);
+	background-color: rgba(#f2f4f6,1);
+}
+
+.bkbMainNav .active {border-bottom-color: rgba(#0896ff, 1);}

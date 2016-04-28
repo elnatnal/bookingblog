@@ -1,0 +1,46 @@
+/******************************************************************************/
+/* .bkbMainFooter */
+/******************************************************************************/
+.bkbMainFooter {
+	padding: 30px 20px 45px 20px;
+	border: 1px solid rgba(#e6e6e6, 1);
+	border-radius: 3px 3px 0 0;
+	background-color: rgba(#fff, 1);
+}
+
+/***************************************************************/
+/* .bkbAboutBooking */
+/***************************************************************/
+.bkbAboutBooking {margin-bottom: 20px;}
+
+.bkbAboutBooking h1 {margin-bottom: 5px;}
+.bkbAboutBooking h1 img {height: 24px;}
+
+ .bkbAboutBooking p {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	color: rgba(#707B87, 1);
+ }
+
+ /***************************************************************/
+ /* .bkbSocial */
+ /***************************************************************/
+.bkbSocial h4 {
+	font-size: 1.4em;
+	color: rgba(#333, 1);
+	margin-bottom: 10px;
+}
+
+.bkbSocialLinks {margin-bottom: 20px;}
+
+.bkbSocialLinks li {
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+}
+
+.bkbCopy {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	color: rgba(#707B87, 1);
+}

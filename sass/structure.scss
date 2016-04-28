@@ -1,0 +1,200 @@
+/******************************************************************************/
+/* body */
+/******************************************************************************/
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 10px;
+	color: rgba(#474747, 1);
+	background-color: rgba(#F4F4F4, 1);
+}
+
+/******************************************************************************/
+/* .wrapper */
+/******************************************************************************/
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.wrapper.mw500 {max-width: 500px;}
+.wrapper.mw930 {max-width: 930px;}
+
+/******************************************************************************/
+/* link style */
+/******************************************************************************/
+a,
+.link {color: rgba(#62B8EC, 1);}
+
+a:hover,
+.link:hover {text-decoration: underline;}
+
+/******************************************************************************/
+/* .bkbSplash */
+/******************************************************************************/
+.bkbSplash {
+	position: relative;
+	padding: 60px 15px 80px 15px;
+	background-color: rgba(#62B8EC, 1);
+	background-position: center;
+	background-size: 100%;
+}
+
+.bkbSplash:after {
+	content: " ";
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	background-color: rgba(#02246D, 0.6);
+}
+
+.bkbSplash h2,
+.bkbSplash > strong {
+	position: relative;
+	z-index: 1;
+	display: block;
+	color: rgba(#fff, 1);
+	text-align: center;
+}
+
+.bkbSplash h2 {
+	margin-bottom: 10px;
+	font-size: 3em;
+}
+
+.bkbSplash > strong {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+/******************************************************************************/
+/* .bkbMainContent */
+/***************************************z***************************************/
+.bkbMainContent {
+	position: relative;
+	top: -30px;
+	padding: 30px 20px 45px 20px;
+	border: 1px solid rgba(#e6e6e6, 1);
+	border-radius: 3px 3px 0 0;
+	background-color: rgba(#fff, 1);
+}
+
+.bkbMainContent:after {
+	content: " ";
+	height: 30px;
+	position: absolute;
+	top: 100%;
+	right: -1px;
+	left: -1px;
+	border-right: 1px solid rgba(#e6e6e6, 1);
+	border-left: 1px solid rgba(#e6e6e6, 1);
+	background-color: rgba(#fff, 1);
+}
+
+/******************************************************************************/
+/* .bkbArticlePreview */
+/******************************************************************************/
+.bkbArticlePreview {
+	margin-bottom: 30px;
+}
+
+.bkbArticlePreview .bkbArticleTitle {
+	font-size: 2em;
+	font-weight: 800;
+	color: rgba(#333333, 1);
+	margin-bottom: 5px;
+}
+
+.bkbArticleMeta {margin-bottom: 15px;}
+
+ .bkbArticleMeta address,
+ .bkbArticleMeta time {
+	display: inline-block;
+	font-size: 1.1em;
+	font-style: normal;
+	color: rgba(#707B87, 1);
+}
+
+.bkbArticleMeta address {
+	padding-right: 5px;
+	border-right: 1px solid rgba(#707B87, 1);
+	margin-right: 2px;
+}
+
+.bkbArticleMeta time {text-transform: uppercase;}
+
+/***************************************************************/
+/* .bkbContentPreview */
+/***************************************************************/
+ .bkbContentPreview {
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.4em;
+	color: rgba(#707B87, 1);
+}
+
+.bkbContentPreview p {margin-bottom: 10px;}
+
+.bkbContentPreview .bkbReadMore {
+	display: inline-block;
+	padding: 0 5px;
+	border-radius: 3px;
+	border: 1px solid rgba(#62B8EC, 1);
+	font-size: 1em;
+	font-weight: 300;
+	color: rgba(#62B8EC, 1);
+}
+
+.bkbContentPreview .bkbReadMore:hover {
+	color: rgba(#fff, 1);
+	text-decoration: none;
+	background-color: rgba(#62B8EC, 1);
+}
+
+/***************************************************************/
+/* .bkbLoadMore */
+/***************************************************************/
+.bkbLoadMore {
+	display: block;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid rgba(#62B8EC, 1);
+	font-size: 1.3em;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgba(#62B8EC, 1);
+}
+
+.bkbLoadMore:hover {
+	color: rgba(#fff, 1);
+	text-decoration: none;
+	background-color: rgba(#62B8EC, 1);
+}
+
+/******************************************************************************/
+/* .bkbContentBanner */
+/******************************************************************************/
+.bkbContentBanner {
+	padding: 40px;
+	background-color: rgba(#03173b, 1);
+}
+
+.bkbContentBanner h4,
+.bkbContentBanner strong {
+	display: block;
+	text-align: center;
+	color: rgba(#fff, 1);
+}
+
+.bkbContentBanner h4 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+.bkbContentBanner strong {
+	font-size: 1.6em;
+	line-height: 1.3em;
+}
