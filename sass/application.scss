@@ -6,3 +6,8 @@
 //Booking.com Blog Structure strucure
 @import 'structure.scss';
 @import '_dev.scss';
+
+//Resolutions Media Queries
+@import 'screen768/_screen768.scss';
+@import 'screen1024/_screen1024.scss';
+@import 'screen1100/_screen1100.scss';
