@@ -75,22 +75,22 @@ a:hover,
 /***************************************z***************************************/
 .bkbMainContent {
 	position: relative;
-	top: -30px;
-	padding: 30px 20px 45px 20px;
+	padding: 0 20px 45px 20px;
 	border: 1px solid rgba(#e6e6e6, 1);
-	border-radius: 3px 3px 0 0;
 	background-color: rgba(#fff, 1);
 }
 
-.bkbMainContent:after {
+.bkbMainContent:before {
 	content: " ";
 	height: 30px;
 	position: absolute;
-	top: 100%;
+	top: -30px;
 	right: -1px;
 	left: -1px;
+	border-top: 1px solid rgba(#e6e6e6, 1);
 	border-right: 1px solid rgba(#e6e6e6, 1);
 	border-left: 1px solid rgba(#e6e6e6, 1);
+	border-radius: 3px 3px 0 0;
 	background-color: rgba(#fff, 1);
 }
 
