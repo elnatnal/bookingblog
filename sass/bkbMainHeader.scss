@@ -2,6 +2,7 @@
 /* .bkbMainHeader.scss */
 /******************************************************************************/
 .bkbMainHeader {
+	position: relative;
 	border-bottom: 1px solid rgba(#5E729E, 1);
 	background-color: rgba(#fff, 1);
 }
@@ -22,7 +23,7 @@
 .bkbMainNav a {
 	display: block;
 	padding: 15px;
-	border-bottom: 1px solid transparent;
+	border-bottom: 2px solid transparent;
 	color: rgba(#707B87, 1);
 	font-size: 1.2em;
 	text-align: center;

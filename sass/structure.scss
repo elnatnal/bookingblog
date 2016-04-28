@@ -14,7 +14,7 @@ body {
 .wrapper {
 	position: relative;
 	max-width: 1200px;
-	padding: 0 15px;
+	padding: 0 25px;
 	margin: 0 auto;
 }
 
@@ -130,41 +130,54 @@ a:hover,
 /* .bkbContentPreview */
 /***************************************************************/
  .bkbContentPreview {
-	font-size: 1.4em;
 	font-weight: 300;
-	line-height: 1.4em;
 	color: rgba(#707B87, 1);
 }
 
-.bkbContentPreview p {margin-bottom: 10px;}
+.bkbContentPreview p {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin-bottom: 10px;
+}
 
-.bkbContentPreview .bkbReadMore {
+/***************************************************************/
+/* .bkbReadMore */
+/***************************************************************/
+.bkbReadMore {
 	display: inline-block;
-	padding: 0 5px;
+	padding: 5px;
 	border-radius: 3px;
 	border: 1px solid rgba(#62B8EC, 1);
-	font-size: 1em;
+	font-size: 1.2em;
 	font-weight: 300;
 	color: rgba(#62B8EC, 1);
 }
 
-.bkbContentPreview .bkbReadMore:hover {
+.bkbReadMore:hover {
 	color: rgba(#fff, 1);
 	text-decoration: none;
 	background-color: rgba(#62B8EC, 1);
 }
+
+.bkbReadMore span {
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.bkbReadMore .fa {font-size: 1.3em;}
 
 /***************************************************************/
 /* .bkbLoadMore */
 /***************************************************************/
 .bkbLoadMore {
 	display: block;
-	padding: 5px;
+	padding: 10px 5px;
 	border-radius: 3px;
 	border: 1px solid rgba(#62B8EC, 1);
 	font-size: 1.3em;
 	text-align: center;
-	text-transform: uppercase;
 	color: rgba(#62B8EC, 1);
 }
 

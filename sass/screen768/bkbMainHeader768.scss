@@ -1,0 +1,26 @@
+/******************************************************************************/
+/* .bkbMainHeader */
+/******************************************************************************/
+.bkbMainHeader h1 {
+	position: relative;
+	top: 3px;
+	float: left;
+	text-align: left;
+	border-bottom-color: transparent;
+}
+/***************************************************************/
+/* .bkbMainNav */
+/***************************************************************/
+.bkbMainNav {
+	float: right;
+}
+
+.bkbMainNav a {
+	float: left;
+	padding: 22px;
+}
+
+.bkbMainNav a:hover,
+.bkbMainNav .active {
+	border-bottom: 3px solid rgba(#0896ff, 1);
+}
