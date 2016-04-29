@@ -1,11 +1,7 @@
 /******************************************************************************/
-/* .bkbMainFooter */
+/* .tags */
 /******************************************************************************/
-.bkbAboutBooking,
-.bkbSocial  {
-	float: left;
-	width: 50%;
+.tags__link {
+	padding: 5px 10px;
+	font-size: 1.6em;
 }
-
-.bkbSocial {padding-left: 80px;}
-

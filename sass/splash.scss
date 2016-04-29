@@ -1,0 +1,50 @@
+/******************************************************************************/
+/* .splash */
+/******************************************************************************/
+.splash {
+	position: relative;
+	padding: 60px 15px 80px 15px;
+	background-color: rgba(#62B8EC, 1);
+	background-position: center;
+	background-size: 100%;
+	transition: 0.5s ease padding;
+
+}
+
+.splash:after {
+	content: " ";
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	background-color: rgba(#02246D, 0.6);
+}
+
+.splash__title,
+.splash__description {
+	position: relative;
+	z-index: 1;
+	display: block;
+	color: rgba(#fff, 1);
+	text-align: center;
+}
+
+.splash__title {
+	margin-bottom: 10px;
+	font-size: 3em;
+	font-weight: 800;
+}
+
+.splash__description {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+/******************************************************************************/
+/* .post .splash */
+/******************************************************************************/
+.post .splash {padding: 60px 15px 30px 15px;}
+.post .splash:after {background-color: rgba(#02246D, 0.2);}
+
+.post .splash__title {text-align: left;}

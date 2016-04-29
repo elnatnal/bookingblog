@@ -1,0 +1,30 @@
+/******************************************************************************/
+/* .tags */
+/******************************************************************************/
+.tags {
+	position: relative;
+	z-index: 1;
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.tags__tag {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+.tags__link {
+	display: inline-block;
+	padding: 3px 5px;
+	border: 1px solid rgba(#fff, 1);
+	border-radius: 3px;
+	font-size: 1.1em;
+	font-weight: 500;
+	color: rgba(#fff, 1);
+}
+
+.tags__link:hover {
+	text-decoration: none;
+	background-color: rgba(#fff, 0.3);
+}

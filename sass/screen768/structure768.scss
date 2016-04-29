@@ -1,56 +1,34 @@
 /******************************************************************************/
-/* <main> */
+/* .main */
 /******************************************************************************/
-main {
+.main {
 	position: relative;
 	top: 59px;
 }
 
 /******************************************************************************/
-/* .bkbSplash */
-/******************************************************************************/
-.bkbSplash {padding: 120px 15px 140px 15px;}
-
-.bkbSplash h2 {font-size: 4em;}
-.bkbSplash > strong {font-size: 2.5em;}
-
-/***************************************************************/
-/* .splash_post */
-/***************************************************************/
-.bkbSplash.splash__post {padding: 200px 15px 60px 15px;}
-
-/******************************************************************************/
-/* .tags */
-/******************************************************************************/
-.tags__link {
-	padding: 5px 10px;
-	font-size: 1.6em;
-}
-
-/******************************************************************************/
-/* .bkbMainContent */
+/* .content */
 /***************************************z***************************************/
-.bkbMainContent {
+.content {
 	padding-right: 30px;
 	padding-left: 30px;
 }
 
-.bkbMainContent:before {
+.content:before {
 	height: 50px;
 	top: -50px;
 }
 
 /******************************************************************************/
-/* .bkbContentPreview */
+/* .post__preview */
 /******************************************************************************/
-.bkbContentPreview{position: relative;}
-.bkbContentPreview p {max-width: calc(100% - 120px);}
-
+.post__preview{position: relative;}
+.post__preview p {max-width: calc(100% - 120px);}
 
 /***************************************************************/
-/* .bkbReadMore */
+/* .post_readMore */
 /***************************************************************/
-.bkbReadMore {
+.post_readMore {
 	position: absolute;
 	right: 0px;
 	top: 50%;
@@ -61,11 +39,11 @@ main {
 /******************************************************************************/
 /* .bkbLoadMore */
 /******************************************************************************/
-.bkbLoadMore {text-transform: uppercase;}
+.loadMore {text-transform: uppercase;}
 
 /******************************************************************************/
-/* .bkbContentBanner */
+/* .banner */
 /******************************************************************************/
-.bkbContentBanner {padding: 80px 40px;}
-.bkbContentBanner h4 {font-size: 3.5em;}
-.bkbContentBanner strong {font-size: 2.1em;}
+.banner {padding: 80px 40px;}
+.banner__title {font-size: 3.5em;}
+.banner__description{font-size: 2.1em;}

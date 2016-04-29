@@ -1,7 +1,7 @@
 /******************************************************************************/
 /* .bkbMainFooter */
 /******************************************************************************/
-.bkbMainFooter {
+.g-footer {
 	padding: 30px 20px 45px 20px;
 	border: 1px solid rgba(#e6e6e6, 1);
 	border-radius: 3px 3px 0 0;
@@ -11,12 +11,12 @@
 /***************************************************************/
 /* .bkbAboutBooking */
 /***************************************************************/
-.bkbAboutBooking {margin-bottom: 20px;}
+.about {margin-bottom: 20px;}
 
-.bkbAboutBooking h1 {margin-bottom: 5px;}
-.bkbAboutBooking h1 img {height: 24px;}
+.about h1 {margin-bottom: 5px;}
+.about h1 img {height: 24px;}
 
- .bkbAboutBooking p {
+ .about p {
 	font-size: 1.2em;
 	line-height: 1.3em;
 	color: rgba(#707B87, 1);
@@ -25,21 +25,21 @@
  /***************************************************************/
  /* .bkbSocial */
  /***************************************************************/
-.bkbSocial h4 {
+.social h4 {
 	font-size: 1.4em;
 	color: rgba(#333, 1);
 	margin-bottom: 10px;
 }
 
-.bkbSocialLinks {margin-bottom: 20px;}
+.social__list {margin-bottom: 20px;}
 
-.bkbSocialLinks li {
+.social__list li {
 	list-style: none;
 	float: left;
 	margin-right: 20px;
 }
 
-.bkbCopy {
+.copy {
 	font-size: 1.2em;
 	line-height: 1.3em;
 	color: rgba(#707B87, 1);
