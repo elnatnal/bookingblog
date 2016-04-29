@@ -51,7 +51,7 @@
 	padding: 15px;
 	border-left: 6px solid rgba(#E5E9ED ,1);
 	background-color: rgba(#F2F4F6 ,1);
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .post__quote p {font-size: 2em;}
@@ -62,6 +62,26 @@
 	font-style: italic;
 	line-height: 1.3em;
 	color: rgba(#707B87, 1);
+}
+
+/***************************************************************/
+/* .post__picture */
+/***************************************************************/
+.post__picture {margin-bottom: 20px;}
+
+.post__picture__img {
+	display: block;
+	width: 100%;
+	border: 1px solid rgba(#e6e6e6, 1);
+	margin-bottom: 5px;
+}
+
+.post__picture__caption {
+	display: block;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 300;
+	font-style: italic;
 }
 
 /******************************************************************************/
