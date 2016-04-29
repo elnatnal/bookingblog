@@ -8,6 +8,8 @@ body {
 	background-color: rgba(#F4F4F4, 1);
 }
 
+b {font-weight: 900;}
+
 /******************************************************************************/
 /* .wrapper */
 /******************************************************************************/
@@ -73,6 +75,45 @@ a:hover,
 	font-weight: 300;
 }
 
+/***************************************************************/
+/* .splash_post */
+/***************************************************************/
+.bkbSplash.splash__post {padding: 60px 15px 30px 15px;}
+.bkbSplash.splash__post:after {background-color: rgba(#02246D, 0.2);}
+
+.bkbSplash.splash__post .spaslh__post_title {text-align: left;}
+
+/******************************************************************************/
+/* .tags */
+/******************************************************************************/
+.tags {
+	position: relative;
+	z-index: 1;
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.tags__tag {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+.tags__link {
+	display: inline-block;
+	padding: 3px 5px;
+	border: 1px solid rgba(#fff, 1);
+	border-radius: 3px;
+	font-size: 1.1em;
+	font-weight: 500;
+	color: rgba(#fff, 1);
+}
+
+.tags__link:hover {
+	text-decoration: none;
+	background-color: rgba(#fff, 0.3);
+}
+
 /******************************************************************************/
 /* .bkbMainContent */
 /***************************************z***************************************/
@@ -100,9 +141,7 @@ a:hover,
 /******************************************************************************/
 /* .bkbArticlePreview */
 /******************************************************************************/
-.bkbArticlePreview {
-	margin-bottom: 30px;
-}
+.bkbArticlePreview {margin-bottom: 30px;}
 
 .bkbArticlePreview .bkbArticleTitle {
 	font-size: 2em;
@@ -214,4 +253,5 @@ a:hover,
 .bkbContentBanner strong {
 	font-size: 1.6em;
 	line-height: 1.3em;
+	font-weight: 300;
 }

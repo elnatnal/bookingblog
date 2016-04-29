@@ -1,4 +1,8 @@
 /******************************************************************************/
-/* .bkbSplash */
+/* .post */
 /******************************************************************************/
-.bkbSplash.splash__post {padding: 300px 15px 60px 15px;}
+.post article,
+.post__comment {width: calc(100% - 210px);}
+
+.post article {float: left;}
+.post .post__sidebar {float: right;}
