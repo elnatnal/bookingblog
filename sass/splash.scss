@@ -16,10 +16,10 @@
 .splash:after {
 	content: " ";
 	position: absolute;
-	top: 1px;
-	right: 1px;
-	bottom: 1px;
-	left: 1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background-color: rgba(#02246D, 0.6);
 }
 
