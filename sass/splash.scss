@@ -8,8 +8,10 @@
 	background-position: center;
 	background-size: 100%;
 	transition: 0.5s ease padding;
-
 }
+
+.splash a,
+.splash a:hover {text-decoration: none;}
 
 .splash:after {
 	content: " ";
@@ -21,10 +23,11 @@
 	background-color: rgba(#02246D, 0.6);
 }
 
+.splash .wrapper {z-index: 1;}
+
 .splash__title,
 .splash__description {
 	position: relative;
-	z-index: 1;
 	display: block;
 	color: rgba(#fff, 1);
 	text-align: center;
@@ -42,9 +45,39 @@
 }
 
 /******************************************************************************/
-/* .post .splash */
+/* .splash__post */
 /******************************************************************************/
-.post .splash {padding-bottom: 40px;}
-.post .splash:after {background-color: rgba(#02246D, 0.2);}
+.splash__post {padding-bottom: 40px;}
+.splash__post:after {background-color: rgba(#02246D, 0.2);}
 
-.post .splash__title {text-align: left;}
+.splash__post .splash__title {text-align: left;}
+
+/******************************************************************************/
+/* .splash__video */
+/******************************************************************************/
+.splash.splash__video {
+	padding: 80px 15px;
+	margin-bottom: 40px;
+}
+
+.splash__video:after {background-color: rgba(#000, 0.5);}
+
+.splash__video .splash__title {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+.splash__play {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	padding: 6px 0 0 11px;
+	border: 4px solid rgba(#fff, 1);
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.splash__play .fa-play {
+	font-size: 2em;
+	color: rgba(#fff, 1);
+}

@@ -7,6 +7,23 @@
 .splash__description {font-size: 2.5em;}
 
 /******************************************************************************/
-/* .post .splash */
+/* .splash__post */
 /******************************************************************************/
-.post .splash {padding: 200px 15px 60px 15px;}
+.splash__post {padding: 200px 15px 60px 15px;}
+
+/******************************************************************************/
+/* .splash__video */
+/******************************************************************************/
+.splash.splash__video {padding: 100px 15px;}
+
+.splash__video .splash__title {font-size: 4em;}
+
+.splash__play {
+	width: 60px;
+	height: 60px;
+	padding: 10px 0 0 18px;
+}
+
+.splash__play .fa-play {
+	font-size: 3em;
+}

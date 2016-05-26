@@ -73,8 +73,8 @@ a:hover,
 
 .post__meta {margin-bottom: 15px;}
 
- .post_author,
- .post__time {
+.post_author,
+.post__time {
 	display: inline-block;
 	font-size: 1.1em;
 	font-style: normal;
@@ -92,7 +92,7 @@ a:hover,
 /***************************************************************/
 /* .post__preview */
 /***************************************************************/
- .post__preview {
+.post__preview {
 	font-weight: 300;
 	color: rgba(#707B87, 1);
 }
@@ -132,9 +132,9 @@ a:hover,
 
 .post_readMore .fa {font-size: 1.3em;}
 
-/***************************************************************/
+/******************************************************************************/
 /* .loadMore */
-/***************************************************************/
+/******************************************************************************/
 .loadMore {
 	display: block;
 	padding: 10px 5px;
@@ -152,28 +152,20 @@ a:hover,
 }
 
 /******************************************************************************/
-/* .banner */
+/* .section__header */
 /******************************************************************************/
-.banner {
-	padding: 40px;
-	background-color: rgba(#03173b, 1);
-	transition: 0.5s ease padding;
-}
+.section__header {margin-bottom: 40px;}
 
-.banner h4,
-.banner strong {
-	display: block;
+.section__header__title {
+	font-size: 2.6em;
+	font-weight: 900;
 	text-align: center;
-	color: rgba(#fff, 1);
+	margin-bottom: 10px;
 }
 
-.banner h4 {
-	font-size: 3em;
-	margin-bottom: 20px;
-}
-
-.banner strong {
+.section__header__tagline {
+	display: block;
 	font-size: 1.6em;
-	line-height: 1.3em;
-	font-weight: 300;
+	text-align: center;
+	color: rgba(#707B87, 1);
 }

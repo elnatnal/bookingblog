@@ -4,6 +4,29 @@
 .splash  {padding: 180px 15px 220px 15px;}
 
 /******************************************************************************/
-/* .post .splash */
+/* .splash__post */
 /******************************************************************************/
-.post .splash  {padding: 300px 15px 60px 15px;}
+.splash__post  {padding: 300px 15px 60px 15px;}
+
+/******************************************************************************/
+/* .splash__video */
+/******************************************************************************/
+.splash.splash__video {
+	padding: 200px 15px;
+	margin-bottom: 70px;
+}
+
+.splash__video .splash__title {
+	font-size: 6em;
+	margin-bottom: 30px;
+}
+
+.splash__play {
+	width: 80px;
+	height: 80px;
+	padding: 15px 0 0 25px;
+}
+
+.splash__play .fa-play {
+	font-size: 4em;
+}

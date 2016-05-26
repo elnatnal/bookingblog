@@ -1,469 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
+<!-- BEGIN g-head -->
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8"/>
+	<title>Booking.com Blog</title>
 
-<title>Gridset Demo</title>
+	<!--[if lte IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	<![endif]-->
 
-<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+	<!-- Standart Favicon -->
+	<link rel="shortcut icon" type="image/png" href="img/favicon@2x.png"/>
 
-<link rel="stylesheet" href="./css/gridset.css" />
-<link rel="stylesheet" href="./css/master.css" />
-<link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+	<!-- Metas -->
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<meta name="author" content="￼" />
+	<meta name="rating" content="general" />
+	<meta name="dcterms.rights" content="#" />
+	<meta name="Copyright" content="#" />
+	<meta name="dcterms.dateCopyrighted" content="￼#" />
+	<meta name="revisit-after" content="1 week" />
+	<link rel="canonical" href="#" />
+	<meta name="google-site-verification" content="#" />
+
+	<!-- Meta related to language -->
+	<meta name="description" content="" />
+	<meta name="keywords" content=""/>
+
+	<!-- OG Protocol -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content=""/>
+
+	<!-- OG Protocol related to language -->
+	<meta property="og:site_name" content=""/>
+	<meta property="og:title" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:description" content=""/>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/application.css">
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100|Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
 
 </head>
+<!-- END g-head -->
+
 <body>
-
-<!-- header.inc would BEGIN HERE -->
-<header class="site__header">
-       	<a href="booking.com" class="logo-block">
-           	<h1 class="booking__logo">
-                	Booking.com
-           	</h1>
-           	<div class="booking__logo__tech-blog">
-               		Tech Blog
-           	</div>
-       	</a>
-
-       	<ul class="nav">
-            	<li class="nav__item nav__item--active">
-                	<a class="nav__link">Blog</a>
-            	</li>
-            	<li class="nav__item">
-               		<a class="nav__link">Events</a>
-            	</li>
-            	<li class="nav__item">
-               		<a class="nav__link">Speaking Corner</a>
-            	</li>
-        </ul>
-</header>	
-<!-- header.inc END HERE -->
-
-	
-
-<!-- masthead.inc BEGIN HERE -->
-
-
-<div class="masthead">
-	<h2>Design</h2>
-	<p>A look inside Design & Research at Booking.com</p>
-	<div class="overlay">    
-    </div>
-</div>
-<!-- masthead.inc END HERE -->
-
-<div class="wrapper">
-<div class="layout">
-
-<!-- EACH "PAGE" LAYOUT WILL BE HERE, WITH THE IF STATEMENTS DIRECTING TO THE APPROPRIATE PAGE -->
-
-<!--
-
-INDEX LAYOUT 
-Index layout consists of "Word cloud" category, "Latest posts" and "Most Popular" blocks of information.
-        - Word cloud
-                -- Each individual category
-        - Posts
-                -- Latest
-                -- Most Popular (same design)
-
-<div class="this_is_a_clas">
-        STUFF
-</div>
--->
-
-
-<!--
-
-POST LIST (FOR BOTH ARTICLES AND EVENTS) 
-Article List is the categorized list of all blog articles under a certain, or all, categories. This layout consists of:
-	- Card
-		-- Article/Event Title
-		-- Author/Venue, location
-		-- Publication/Event Date
-		-- Lede of article/Short description of event
-	- List Sidebar
-		-- All categories
-		-- Tags?
-
-
-<div class="this_is_a_clas">
-        ARTICLE EVENT ARTICLE EVENT
-</div>
--->
-
-<!-- 
-
-AUTHOR PAGE
-The author page is where the author has a biography with a list of their articles, speaking gigs, etc. A one stop shop for everything the author has. This layout consists of:
-	- Author card
-		-- photo
-		-- title
-		-- biography
-		-- social
-	- List of articles the author has written
-	- List of speaking gigs this author has participated in
-
-<div class="this_is_a_clas">
-        AUTHOR AUTHOR AUTHOR
-</div>
-
--->
-
-
-<!--
-
-EVENT PAGE
-The author page is where the author has a biography with a list of their articles, speaki
-ng gigs, etc. A one stop shop for everything the author has. This layout consists of:
-        - Event card
-                -- photo
-                -- title
-                -- what the event is
-                -- social
-		-- when the event is
-		-- where the event is	
-        - Author at Booking.com that is speaking at this event
-		-- Small author card
-		-- Title of Talk
-		-- Brief content
-
-<div class="this_is_a_clas">
-        EVENT EVENT EVENT EVENT
-</div>
-
--->
-
-
-
-<!--
-
-ARTICLE PAGE
-The Article Page is the bread and butter of the blog. This is where the content of individual blog posts go. 
-
-        - Content
-                -- title
-                -- lede
-                -- social
-                -- content
-	- Comments
-	- Sidebar 
-                -- Small author card
-			-- photo
-			-- title
-			-- small desc. w/ link
-			-- social
--->
-<aside class="article__aside__author d5-d6">
-	<a class="article__aside__author_link-profile" href="#">
-	<img src="./img/photo_author.png" class="article__aside__author--photo">
-	<h4>Yolanda van Kimmenade</h4>
-	</a>
-	<p class="article__aside__author--blurb">
-	Because we don’t want to be judged too harshly on these early attempts. Society  fear of failure throughout our lives, 
-	</p>
-	<div class="article__aside__author--social">
-	<h5>Follow Yolanda on</h5>
-        <div class="article__aside__author--social__icons">
-            <a class="article__aside__author--social__icons__item socicon-twitter" href="#" title="twitter"></a>
-            <a class="article__aside__author--social__icons__item socicon-dribbble" title="Dribbble" href="#"></a>
-            <a class="article__aside__author--social__icons__item socicon-linkedin" title="Linkedin" href="#"></a>
-        </div>
-	</div>
-
-</aside>
-
-<article class="article d1-d4">
-
-	<header class="post__header">
-		<div class="post__header__category">Design</div> 
-    		<h1 class="post__header__title">
-			How We Spent Two Days Making Perl Faster
-		</h1>
-  	</header>
-
-	<p class="post__lede">This is a story about a significant new optimization to the Perl
-	interpreter. It is a story about battling code complexity. And it is a
-	story about wanting to have our cake and eat it too.</p>
-
-	<p>A recent Booking.com hackathon provided us the opportunity to
-	investigate speeding up integer allocation in the Perl interpreter. If
-	successful, this could optimize nearly every program we run. We
-	discovered that a naive implementation <em>could</em> work, but would make the
-	code a lot more difficult to maintain. Our path lead us to attempt to
-	leverage the C preprocessor to improve code clarity while opening doors
-	to real gains in program execution speed.</p>
-
-	<h2>First, some background</h2>
-	<p>As described in <a href="http://perldoc.perl.org/perlguts.html" title="perlguts">perlguts</a> and <a href="http://cpansearch.Perl.org/src/RURBAN/illguts-0.49/index.html" title="PerlGuts Illustrated">PerlGuts Illustrated</a>, representations of variables in Perl are usually composed of two parts: a <em>head</em> struct and (optionally) a <em>body</em> struct.
-	The <em>head</em> contains the essential &ldquo;internal book-keeping&rdquo;
-	common to all variables (regardless of type) including a pointer to the
-	(optional) <em>body</em> struct. Below is an image of the layout of fields in a
-	<em>head</em> struct as depicted in <em>PerlGuts Illustrated</em>:</p>
-	<p><center><img
-	  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svhead.png"
-	  alt="SV Head (PerlGuts Illustrated)"></center></p>
-	
-	<p>The <em>body</em> struct can be quite different, depending upon the type of the
-	variable. The most simple type of variable is the <code>SvNULL</code>, which
-	represents <code>undef</code> and does not need a body struct at all.</p>
-
-	<p>A string (called <code>PV</code> for &ldquo;pointer value&rdquo;) has a body type of <code>XPV</code>:</p>
-
-	<p><center><img
-	  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svpv-14.png"
-	  alt="SvPV (PerlGuts Illustrated)"></center></p>
-	
-	<p>But the body struct of a <code>PV</code> is different to a body struct of a <code>PVNV</code>.
-	A <code>PVNV</code> can hold a floating point number and a string representation of
-that same value:</p>
-<p><center><img
-  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/svpvnv-14.png"
-  alt="SvPVNV (PerlGuts Illustrated)"></center></p>
-<p>One benefit of this type of design is that all references to the value
-point to the memory location of the <em>head</em>. As such, Perl is free to
-change which memory is being used to represent a value by changing the
-<em>body</em> struct, without having to update any pointer except the pointer
-contained within the <em>head</em>.</p>
-<h2>Changing types</h2>
-<p>Naturally, Perl has an internal function to convert between types of
-variable. This function is <code>sv_upgrade</code> (&ldquo;scalar value
-upgrade&rdquo;). In essence, whenever we have a variable of some type in
-Perl (for example, a simple integer) and we need to access it as a
-different type (for example, a string), the <code>sv_upgrade</code> will convert
-the type of the variable (for example, into a type that contains both
-integer and string representations of a value). This change may involve
-replacing the body struct with a larger struct.</p>
-<p>To see how <code>sv_upgrade</code> is implemented, we can look at the
-<code>Perl_sv_upgrade</code> function in <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1203" title="sv.c Perl_sv_upgrade"><code>sv.c</code></a>. We see that this function encapsulates a lot
-of complexity. There are many comments, which describe subtle corner
-cases. Since it can take a scalar value of essentially any type and
-convert it to something capable of representing any other type, perhaps
-it&rsquo;s unsurprising that there&rsquo;s a lot of code here.</p>
-<p>Without going line-by-line, an overview of how this function is
-implemented may be useful. First, there is a <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1272" title="sv.c Perl_sv_upgrade first switch"><code>switch</code></a> based on the current type of
-variable, to determine what it needs for the new type. Shortly
-thereafter, there is a <a href="http://perl5.git.perl.org/perl.git/blob/2a4873c400916c0a8c610de00a75facc925c0b6a:/sv.c#l1330" title="sv.c Perl_sv_upgrade second switch">second <code>switch</code></a> based on the new type. Inside of
-the second <code>switch</code> block, there are numerous <code>if</code> blocks for doing
-different things depending on the old type. Finally, after the new body
-struct has been set up, and the head struct contains all the correct
-flags, the memory used by the old body is freed.</p>
-<p>Still with me? Good.</p>
-<h2>A naive optimization</h2>
-<p>The <code>sv_upgrade</code> function is called from a number of places. Not only is
-it called in places such as printing integers as strings, but it&rsquo;s
-also called when assigning an integer value to a previously cleared
-variable.</p>
-<p>A previously cleared variable is always an <code>undef</code> with no body struct.
-The reason <code>sv_upgrade</code> is called is to allow the correct setup for the
-body to occur. This was a very sensible design decision, as it
-centralizes a lot of &ldquo;internal book-keeping&rdquo; behavior,
-rather than duplicating it. The cost of this centralization is
-performance: some generic (and in this case superfluous) code is
-executed. For example, when creating a new integer, <code>sv_upgrade</code> will
-run an unnecessary check for a conversion of a larger type to a smaller
-type.</p>
-<p>Integer assignment to a cleared variable occurs so frequently that one
-would imagine it might be worth duplicating the required complexity to
-achieve the performance improvement. Thus we decided to evaluate that
-trade-off for integer allocation. After a review of the nearly 300 lines
-of <code>sv_upgrade</code> internals, we saw that we could remove the call entirely
-if we could &ldquo;hoist out&rdquo; just the essential <strong>two lines</strong> of
-code! However, there is a very good reason this had not been done
-before. Let's look at the two lines.</p>
-<p>The first line (since we know the new type) is easy:</p>
-<div class="codehilite"><pre><span></span>SvFLAGS(sv) |= new_type;
-</pre></div>
-
-
-<p>But the other line is quite complex:</p>
-<div class="codehilite"><pre><span></span>SvANY(sv) = (XPVIV*)((char*)&amp;(sv-&gt;sv_u.svu_iv) - STRUCT_OFFSET(XPVIV, xiv_iv));
-</pre></div>
-
-
-<p>If your head is swimming after looking at that last line of code,
-don&rsquo;t worry: you&rsquo;re in good company. Granted, this is
-described in <em>Illustrated perlguts</em>:</p>
-<blockquote>
-<p>Since 5.10 for a raw IV (without PV) the IVX slot is in the HEAD,
-there is no xpviv struct ("body") allocated. The SvIVX macro abuses
-SvANY pointer arithmethic <!-- [sic] --> to point to a compile-time
-calculated negative offset from HEAD-1 to sv_u.svu_iv, so that PVIV
-and IV can use the same SvIVX macro.</p>
-</blockquote>
-<p>But, even once I thought I maybe understood what that complex line of
-code supposedly did, I made <a href="https://metacpan.org/author/SMUELLER">Steffen</a> patiently sit for more than 15
-minutes as I convinced myself with paper and pencil that it actually did
-what he had described. After that, the drawing from Illustrated Perl
-Guts made more sense to me:</p>
-<p><center><img
-  src="http://cpansearch.perl.org/src/RURBAN/illguts-0.49/sviv-14.png"
-  alt="Bodyless SVIV (PerlGuts Illustrated)"></center></p>
-<p>What&rsquo;s more, I finally understood that <em>this</em> complexity exists in
-order to avoid executing an <code>if</code> statement that would otherwise be
-called every time the value is retrieved!</p>
-<p>Thus, the previous design trade-offs seemed like the right ones. Yes,
-we could make Perl faster, but at the cost of leaking a lot of
-complexity into another part of the code. That complexity would make any
-additional development much more difficult in any future work.</p>
-<h2>Having our cake and eating it too</h2>
-<!-- Could we contain that hairy bit of code in a hairnet? -->
-
-<!-- If we simply created a function, we would risk adding some small
-overhead that comes with calling a function. -->
-
-<!-- A bigger
-discussion about linkers and whether or not this will be optimized away
-by a compiler. -->
-
-<p>We wanted to encapsulate that very complex bit of code, but without any
-added runtime performance cost. Since this is C, we looked at using the
-preprocessor to push the complexity behind a macro, in much the same way
-that with other languages we might move some hairy lines of code behind
-a well named function or method:</p>
-<div class="codehilite"><pre><span></span>#define SET_SVANY_FOR_BODYLESS_IV(sv) \
-    SvANY(sv) = (XPVIV*)((char*)&amp;(sv-&gt;sv_u.svu_iv) - STRUCT_OFFSET(XPVIV, xiv_iv))
-</pre></div>
-
-
-<p>And, of course, the advantage of using a macro (rather than a function)
-is that the cost is paid entirely at compile time, and thus there is
-zero additional runtime performance lost.</p>
-<p>By <a href="http://perl5.git.perl.org/perl.git/patch/dc6369efc01b79eb657ea176c81cab927b54a2d1" title="Refactor bodyless-IV/NV hacks into define">introducing the macro</a>, the readability of the
-code would be improved in several places.</p>
-<p>So, how did this change our situation? With the macro, the two lines we
-wanted to &ldquo;hoist out&rdquo; looked a lot less complex. All we
-would need would be a <a href="http://perl5.git.perl.org/perl.git/patch/de06ff5a50f29eaee3e72394fa1c2417689cac47" title="Speed up assigning an IV to a previously cleared SV">patch</a> which replaces
-this one computationally heavy function call:</p>
-<div class="codehilite"><pre><span></span>sv_upgrade(dstr, SVt_IV);
-</pre></div>
-
-
-<p>with just these two lines:</p>
-<div class="codehilite"><pre><span></span>SET_SVANY_FOR_BODYLESS_IV(dstr);
-SvFLAGS(dstr) |= SVt_IV;
-</pre></div>
-
-
-<p>By factoring the complexity differently, we opened the doors to a
-different set of performance/complexity cost trade-offs. We would leak
-only a small amount of complexity relative to the gain in performance.
-But is it worth it? With these changes, the cost would be low, but what
-would the actual benefit be?</p>
-<h2>Measuring the gain</h2>
-<p>The micro-benchmark we used is very heavy on exercising one particular
-code path, however it is a common code path.</p>
-<div class="codehilite"><pre><span></span>  <span class="nv">$</span> <span class="nv">dumbbench</span> <span class="o">-</span><span class="n">i50</span> <span class="o">--</span><span class="n">pin</span><span class="o">-</span><span class="n">frequency</span> <span class="o">--</span> <span class="o">\</span>
-    <span class="o">./</span><span class="n">perl</span> <span class="o">-</span><span class="n">Ilib</span> <span class="o">-</span><span class="n">e</span> <span class="o">\</span>
-    <span class="s">&#39;for my $x (1..1000){my @a = (1..2000);}&#39;</span>
-</pre></div>
-
-
-<p>Here are the results of the micro-benchmark before the optimization:</p>
-<div class="codehilite"><pre><span></span>  Rounded run time per iteration: 2.4311e-01 +/- 1.4e-04
-</pre></div>
-
-
-<p>And here are the results after the optimization:</p>
-<div class="codehilite"><pre><span></span>  Rounded run time per iteration: 1.99354e-01 +/- 5.5e-05
-</pre></div>
-
-
-<p>That&rsquo;s 18% faster.</p>
-<h2>Results</h2>
-<p>Overall, this hackathon project was a success.</p>
-<p>With these measurements, we demonstrated that the optimization was
-worthwhile. The complexity cost is pretty close to zero: in some places
-the Perl core is <em>slightly</em> more complex, but the internals of
-<code>sv_upgrade</code> are certainly more clear.<!-- The values of the earlier
-design decisions were respected (containing complexity) and new
-performance wins have been achieved.--> Additionally, we found there
-were other similar potential optimizations that could leverage the same
-technique. In the end, five related patches were pushed to Perl:</p>
-<ul>
-<li><a href="http://perl5.git.perl.org/perl.git/commit/dc6369efc01b79eb657ea176c81cab927b54a2d1">Refactor bodyless-IV/NV hacks into define</a></li>
-<li><a href="http://perl5.git.perl.org/perl.git/commit/de06ff5a50f29eaee3e72394fa1c2417689cac47">Speed up assigning an IV to a previously cleared SV</a></li>
-<li><a href="http://perl5.git.perl.org/perl.git/commit/bd30fe8921c88e4677c2279b442a56a11ae037b4">Speed up newSViv()</a></li>
-<li><a href="http://perl5.git.perl.org/perl.git/commit/4d55d9ac67bf8bc58f3fc9563b082459c6a3c22b">Repeat newSViv optimization for newSVuv</a></li>
-<li><a href="http://perl5.git.perl.org/perl.git/commit/7777302a0051987e602dfe05c34b52adf18cc9f0">Attempt to bring newSViv/uv optimization to newRV</a></li>
-</ul>
-<p>When Perl 5.22 ships, in part because of this work, many real-world
-programs will be faster.</p>
-  </div>
-</article>
-</div>
-
-
-</div>
-
-
-<!-- footer.inc would BEGIN HERE -->
-	<!-- script includes would BEGIN HERE-->
-        	<!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
-       		<script src="https://get.gridsetapp.com/34842/overlay/"></script>
-	<!-- script includes would END HERE -->
-
-        <div class="banner-bottom">
-            <h2 class="banner-bottom__heading">
-                Work with us
-            </h2>
-            <p class="banner-bottom__paragraph">
-        Join Booking.com today!  Don't miss out on great new jobs at <a class="banner-bottom__link" href="workingatbooking.com">workingatbooking.com</a> </p>
-
-        </div>
-
-    <footer>
-            <div class="booking-about m-all d1-d3 ">
-                <a href="booking.com" class="booking__logo-footer">booking.com </a>
-                <p>
-                Booking.com is  the world's leading online accommodation provider, operating across 223 countries in 42 languages. Our team of designers, developers, database engineers &amp; Sysadmins solve complicated problems at huge scale.
-                </p>
-            </div>
-            <div class="get-in-touch m-all d4-d6">
-            <h5>GET IN TOUCH</h5>
-             <div class="social-icons">
-                    <a href="https://www.facebook.com/bookingcom" class="social-icons__item social-icons__facebook">
-                    <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="facebook" sketch:type="MSLayerGroup">
-            <circle id="circle" fill="#EFF1F4" sketch:type="MSShapeGroup" cx="20" cy="20" r="20"></circle>
-            <path d="M17.5424231,20.5991108 L17.5424231,31.1530196 L21.8084476,31.1530196 L21.8084476,20.5991108 L25.3519822,20.5991108 L25.8999629,16.4831419 L21.8084476,16.4831419 L21.8084476,13.8377177 C21.8084476,13.1896999 21.9585031,12.6906262 22.2330493,12.341608 C22.5075954,12.0170433 23.0311226,11.8425343 23.829196,11.8425343 L26,11.8425343 L26,8.17450908 C25.2519452,8.05001853 24.2037792,8 22.8321601,8 C21.2349018,8 19.9377547,8.47350871 18.9896258,9.42274917 C18.0170433,10.3697666 17.5424231,11.7169322 17.5424231,13.438681 L17.5424231,16.4831419 L14,16.4831419 L14,20.5991108 L17.5424231,20.5991108" id="ic_facebook" fill="#707B87" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
-                    </a>
-                
-                    <a href="https://twitter.com/bookingcom" class="social-icons__item social-icons__twitter">
-                <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="twitter" sketch:type="MSLayerGroup">
-            <circle id="circle" fill="#EFF1F4" sketch:type="MSShapeGroup" cx="20" cy="20" r="20"></circle>
-            <path d="M16.279777,28.2453117 C17.736442,28.2453117 19.1008616,28.0182463 20.3983781,27.5631019 C21.6725798,27.0846427 22.7643183,26.4703497 23.6746072,25.6969083 C24.5615813,24.9234668 25.3583376,24.0364927 26.0182463,23.0349721 C26.6548403,22.0111505 27.1556006,20.9640142 27.4738976,19.8722757 C27.7932083,18.7805373 27.9523568,17.6877851 27.9523568,16.5727319 L27.9523568,16.0496706 C28.7480993,15.4586923 29.4313229,14.7531678 30,13.9341105 C29.2032438,14.2524075 28.4298023,14.4794729 27.6330461,14.5484034 C28.521034,14.0243284 29.1353269,13.2742017 29.4313229,12.2959959 C28.6345666,12.7734415 27.7698936,13.1150532 26.8373036,13.2965028 C26.0182463,12.4318297 25.0167258,12 23.8337557,12 C22.7187025,12 21.7404967,12.3862139 20.9437405,13.1829701 C20.147998,14.0020274 19.7384693,14.9579321 19.7384693,16.0952864 C19.7384693,16.3912823 19.7840851,16.7095793 19.852002,17.0278763 C18.1682717,16.9599595 16.598074,16.5271161 15.119108,15.7769894 C13.6634567,15.0035479 12.411556,14.0020274 11.3877344,12.7511404 C11.0238216,13.3877344 10.8190573,14.0699442 10.8190573,14.8210846 C10.8190573,15.5032945 11.0015205,16.1632032 11.3198175,16.7774962 C11.6614293,17.3694881 12.093259,17.8469336 12.6619361,18.2341612 C12.0020274,18.2108464 11.3877344,18.0293969 10.7967562,17.7110998 L10.7967562,17.7567157 C10.7967562,18.7572225 11.1150532,19.6218956 11.7293462,20.373036 C12.3659402,21.1241764 13.1393817,21.5783071 14.0952864,21.7830715 C13.7313735,21.8743031 13.3674607,21.9199189 13.0035479,21.9199189 C12.7754688,21.9199189 12.5250887,21.8976178 12.2301064,21.852002 C12.5027876,22.6710593 12.9802331,23.3532691 13.6857577,23.8773441 C14.3912823,24.4227065 15.1880385,24.6953877 16.0750127,24.6953877 C14.5737456,25.8793715 12.8900152,26.4480487 10.9782058,26.4480487 C10.614293,26.4480487 10.2959959,26.4480487 10,26.4024328 C11.8884947,27.6310188 14.0040547,28.2453117 16.279777,28.2453117" id="ic_twitter" fill="#707B87" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
-
-                </a>
-                    <a href="https://www.linkedin.com/company/booking.com" class="social-icons__item social-icons__linkedin">
-
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-            <g id="linkedin" sketch:type="MSLayerGroup">
-           <circle id="circle" fill="#EFF1F4" sketch:type="MSShapeGroup" cx="20" cy="20" r="20"></circle> sketch:type="MSShapeGroup"></path>
-            <path d="M10.6521965,12.8228269 C11.0717624,13.2423928 11.6554159,13.4521757 12.3543462,13.4521757 L12.3782324,13.4521757 C13.1238966,13.4521757 13.7065116,13.2423928 14.1489251,12.8228269 C14.5923772,12.3793748 14.8021601,11.8663413 14.8021601,11.2141448 C14.8021601,10.5847959 14.568491,10.0489147 14.1489251,9.62934884 C13.7293592,9.20978295 13.1467442,9 12.4239277,9 C11.7011112,9 11.1184962,9.20978295 10.6760827,9.62934884 C10.2326306,10.0489147 10,10.5847959 10,11.2141448 C10,11.8663413 10.2097829,12.3793748 10.6521965,12.8228269 L10.6521965,12.8228269 Z M10.2565168,28.0912867 L14.5456434,28.0912867 L14.5456434,15.2239069 L10.2565168,15.2239069 L10.2565168,28.0912867 Z M21.1891162,28.0912867 L21.1891162,20.9108942 C21.1891162,20.4684806 21.23585,20.1184962 21.3293177,19.8619794 C21.5152145,19.4195659 21.7956174,19.0467338 22.1684495,18.7434832 C22.5173954,18.4402326 22.9836951,18.3000312 23.5434625,18.3000312 C24.2891266,18.3000312 24.8250078,18.5565479 25.1749922,19.0695815 C25.5249766,19.582615 25.7108734,20.3054315 25.7108734,21.2141448 L25.7108734,28.0912867 L30,28.0912867 L30,20.7249974 C30,18.8130647 29.5575865,17.3684702 28.6488732,16.389137 C27.7391214,15.4098037 26.5500052,14.9206564 25.0586769,14.9206564 C24.5227957,14.9206564 24.0097622,14.9902378 23.5663101,15.1304393 C23.1238966,15.2467546 22.7510645,15.4336899 22.4249662,15.6891681 C22.1217157,15.9228373 21.8880465,16.1554679 21.7021498,16.3662893 C21.5152145,16.5750338 21.3293177,16.8087029 21.16523,17.0880673 L21.1891162,17.0880673 L21.1891162,15.2239069 L16.8999896,15.2239069 L16.9228373,15.8532558 L16.9228373,19.6989303 C16.9228373,21.8434936 16.9228373,24.6412919 16.8999896,28.0912867 L21.1891162,28.0912867 L21.1891162,28.0912867 Z" id="ic_linkedin" fill="#707B87" sketch:type="MSShapeGroup"></path>
-        </g>
-        </svg>
-                    </a>
-                </div>
-                <p>
-                    ©2016 Booking.com. All rights reserved.
-                </p>
-            </div>
-        </footer>
-
-<!-- footer.inc END HERE -->
+	<div class="main">
+
+		<header class="g-header cf">
+			<div class="wrapper cf">
+				<h1>
+					<strong class="vhide">Booking.com</strong>
+					<img src="img/Logo_Booking.com_rgb.svg" alt="Booking.com Logo" />
+				</h1>
+				<nav class="g-nav cf">
+					<a class="active" href="">Blog</a>
+					<a href="">Events</a>
+					<a href="">Speacking Corner</a>
+				</nav><!-- End .g-nav -->
+			</div><!-- End .wrapper -->
+		</header><!-- End .g-header -->
+
+		<section class="g-content">
+
+			<header class="splash splash__video" style="background-image: none;">
+				<a href="">
+					<div class="wrapper">
+						<h2 class="splash__title">We build stuff that scale</h2>
+						<div class="splash__play">
+							<i class="fa fa-play" aria-hidden="true"></i>
+						</div><!-- End .play -->
+					</div><!-- End .wrapper -->
+				</a>
+			</header><!-- End .splash -->
+
+			<div class="container">
+				<div class="wrapper">
+
+					<section class="categories">
+						<header class="section__header">
+							<h2 class="section__header__title">Explore Booking.com Blog</h2>
+							<strong class="section__header__tagline">Stay up to date with everything that’s happening.</strong>
+						</header><!-- End .categoryBox__header -->
+						<ul class="listbox cf">
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Development</h3>
+									<span>Booking.com developer community</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Design</h3>
+									<span>A look inside Design & Research at Booking.com</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Systems Engineering</h3>
+									<span>A look inside Design & Research.</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Data science</h3>
+									<span>Working with data</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Operations</h3>
+									<span>A look inside Design & Research.</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="listbox__item">
+									<h3>Data Science</h3>
+									<span>Working with data</span>
+								</a>
+							</li>
+						</ul><!-- End .listbox -->
+					</section><!-- End .categories -->
+
+					<section class="content  post__list">
+						<header class="content__header vhide">
+							<h3>Recent posts</h3>
+						</header><!-- End .content__header -->
+
+						<article class="post">
+							<header class="post__header">
+								<h3 class="post_title">Changing our attitute towards failure</h3>
+								<div class="post__meta">
+									<address class="post_author">
+										<a rel="author" href="/author/john-doe">Yolanda van Kimmenade</a>
+									</address>
+									<time class="post__time" datetime="2015-09-21" title="September 21th, 2015">Sept 21, 2015</time>
+								</div><!-- End .post__meta -->
+							</header>
+							<div class="post__preview">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+								<a class="post_readMore" href="#">
+									<span>Read more</span>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a><!-- End .post_readMore -->
+							</div><!-- End .post__preview -->
+						</article><!-- End .post -->
+
+						<article class="post">
+							<header class="post__header">
+								<h3 class="post_title">Changing our attitute towards failure</h3>
+								<div class="post__meta">
+									<address class="post_author">
+										<a rel="author" href="/author/john-doe">Yolanda van Kimmenade</a>
+									</address>
+									<time class="post__time" datetime="2015-09-21" title="September 21th, 2015">Sept 21, 2015</time>
+								</div><!-- End .post__meta -->
+							</header>
+							<div class="post__preview">
+								<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<a class="post_readMore" href="#">
+									<span>Read more</span>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a><!-- End .post_readMore -->
+							</div><!-- End .post__preview -->
+						</article><!-- End .post -->
+
+						<article class="post">
+							<header class="post__header">
+								<h3 class="post_title">Changing our attitute towards failure</h3>
+								<div class="post__meta">
+									<address class="post_author">
+										<a rel="author" href="/author/john-doe">Yolanda van Kimmenade</a>
+									</address>
+									<time class="post__time" datetime="2015-09-21" title="September 21th, 2015">Sept 21, 2015</time>
+								</div><!-- End .post__meta -->
+							</header>
+							<div class="post__preview">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<a class="post_readMore" href="#">
+									<span>Read more</span>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a><!-- End .post_readMore -->
+							</div><!-- End .post__preview -->
+						</article><!-- End .post -->
+
+						<article class="post">
+							<header class="post__header">
+								<h3 class="post_title">Changing our attitute towards failure</h3>
+								<div class="post__meta">
+									<address class="post_author">
+										<a rel="author" href="/author/john-doe">Yolanda van Kimmenade</a>
+									</address>
+									<time class="post__time" datetime="2015-09-21" title="September 21th, 2015">Sept 21, 2015</time>
+								</div><!-- End .post__meta -->
+							</header>
+							<div class="post__preview">
+								<p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+								<a class="post_readMore" href="#">
+									<span>Read more</span>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a><!-- End .post_readMore -->
+							</div><!-- End .post__preview -->
+						</article><!-- End .post -->
+
+						<a class="loadMore">Load more articles</a>
+					</section><!-- End .content -->
+				</div><!-- End .wrapper -->
+
+				<section class="banner">
+					<div class="wrapper">
+						<h4 class="banner__title">Check our events</h4>
+						<strong class="banner__description">We regulary support events and meetups. Get yourself informed for our next event at <a href="http://blog.booking.com/events">blog.booking.com/events</a>.</strong>
+					</div><!-- End .wrapper -->
+				</section><!-- End .banner -->
+
+			</div><!-- End .container -->
+		</section><!-- End .g-content -->
+
+		<footer class="g-footer cf">
+			<div class="wrapper">
+				<div class="content cf">
+					<div class="about">
+						<h1>
+							<strong class="vhide">Booking.com</strong>
+							<img src="img/Logo_Booking.com_rgb.svg" alt="Booking.com Logo" />
+						</h1>
+						<p>Booking.com is the world's leading online accommodation provider, operating across 223 countries in 42 languages. Our team of designers, developers, database engineers & Sysadmins solve complicated problems at huge scale.</p>
+					</div><!-- End .about -->
+
+					<div class="social">
+						<h4>Get it touch</h4>
+						<ul class="social__list cf">
+							<li>
+								<a href="#">
+									<span class="vhide">Booking.com Facebook</span>
+									<img src="img/facebook.svg" alt="Facebook icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="vhide">Booking.com Twitter</span>
+									<img src="img/twitter.svg" alt="Twitter icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="vhide">Booking.com Linkedin</span>
+									<img src="img/linkedin.svg" alt="Linkedin icon" />
+								</a>
+							</li>
+						</ul><!-- End .social__list -->
+						<p class="bkbCopy">©2016 Booking.com. All rights reserved.</p>
+					</div><!-- End .social -->
+			</div><!-- End .content -->
+			</div><!-- End .wrapper -->
+		</footer><!-- End .g-footer -->
+	</div><!-- End .main -->
+	<!-- Scripts! :) -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
 </body>
 </html>

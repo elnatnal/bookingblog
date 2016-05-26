@@ -1,0 +1,40 @@
+/******************************************************************************/
+/* .listbox */
+/******************************************************************************/
+.listbox {
+	list-style: none;
+	margin-bottom: 70px;
+}
+
+.listbox__item {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	min-height: 160px;
+	text-align: center;
+	margin-bottom: 5px;
+	background-color: rgba(#62B8EC, 0.8);
+}
+
+.listbox__item:hover {
+	text-decoration: none;
+	background-color: rgba(#62B8EC, 1);
+}
+
+.listbox__item h3,
+.listbox__item > span {
+	display: block;
+	color: rgba(#fff, 1);
+}
+
+.listbox__item h3 {
+	font-size: 2.2em;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.listbox__item > span {
+	font-size: 1.6em;
+	font-weight: 300;
+}

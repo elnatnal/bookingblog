@@ -37,13 +37,16 @@
 }
 
 /******************************************************************************/
-/* .bkbLoadMore */
+/* .loadMore */
 /******************************************************************************/
 .loadMore {text-transform: uppercase;}
 
 /******************************************************************************/
-/* .banner */
+/* .section__header */
 /******************************************************************************/
-.banner {padding: 80px 40px;}
-.banner__title {font-size: 3.5em;}
-.banner__description{font-size: 2.1em;}
+.section__header__title {
+	font-size: 3.6em;
+	font-weight: 900;
+}
+
+.section__header__tagline {font-size: 2.2em;}
