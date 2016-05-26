@@ -1,0 +1,171 @@
+/******************************************************************************/
+/* body */
+/******************************************************************************/
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 10px;
+	color: rgba(#474747, 1);
+	background-color: rgba(#F4F4F4, 1);
+}
+
+b {font-weight: 900;}
+
+/******************************************************************************/
+/* .wrapper */
+/******************************************************************************/
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	padding: 0 25px;
+	margin: 0 auto;
+}
+
+.wrapper.mw500 {max-width: 500px;}
+.wrapper.mw930 {max-width: 930px;}
+
+/******************************************************************************/
+/* link style */
+/******************************************************************************/
+a,
+.link {color: rgba(#62B8EC, 1);}
+
+a:hover,
+.link:hover {text-decoration: underline;}
+
+/******************************************************************************/
+/* .content */
+/***************************************z***************************************/
+.content {
+	position: relative;
+	padding: 0 20px 45px 20px;
+	border: 1px solid rgba(#e6e6e6, 1);
+	background-color: rgba(#fff, 1);
+}
+
+.container .content:before {
+	content: " ";
+	height: 30px;
+	position: absolute;
+	top: -30px;
+	right: -1px;
+	left: -1px;
+	border-top: 1px solid rgba(#e6e6e6, 1);
+	border-right: 1px solid rgba(#e6e6e6, 1);
+	border-left: 1px solid rgba(#e6e6e6, 1);
+	border-radius: 3px 3px 0 0;
+	background-color: rgba(#fff, 1);
+}
+
+/******************************************************************************/
+/* .post__list */
+/******************************************************************************/
+.post__list .post {margin-bottom: 30px;}
+
+/******************************************************************************/
+/* .post */
+/******************************************************************************/
+.post_title {
+	font-size: 2.4em;
+	font-weight: 600;
+	color: rgba(#333333, 1);
+	margin-bottom: 5px;
+}
+
+.post__meta {margin-bottom: 15px;}
+
+.post_author,
+.post__time {
+	display: inline-block;
+	font-size: 1.1em;
+	font-style: normal;
+	color: rgba(#707B87, 1);
+}
+
+.post_author {
+	padding-right: 5px;
+	border-right: 1px solid rgba(#707B87, 1);
+	margin-right: 2px;
+}
+
+.post__time {text-transform: uppercase;}
+
+/***************************************************************/
+/* .post__preview */
+/***************************************************************/
+.post__preview {
+	font-weight: 300;
+	color: rgba(#707B87, 1);
+}
+
+.post__preview p {
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 1.5em;
+	margin-bottom: 10px;
+}
+
+/***************************************************************/
+/* .post_readMore */
+/***************************************************************/
+.post_readMore {
+	display: inline-block;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid rgba(#62B8EC, 1);
+	font-size: 1.2em;
+	font-weight: 300;
+	color: rgba(#62B8EC, 1);
+}
+
+.post_readMore:hover {
+	color: rgba(#fff, 1);
+	text-decoration: none;
+	background-color: rgba(#62B8EC, 1);
+}
+
+.post_readMore span {
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.post_readMore .fa {font-size: 1.3em;}
+
+/******************************************************************************/
+/* .loadMore */
+/******************************************************************************/
+.loadMore {
+	display: block;
+	padding: 10px 5px;
+	border-radius: 3px;
+	border: 1px solid rgba(#62B8EC, 1);
+	font-size: 1.3em;
+	text-align: center;
+	color: rgba(#62B8EC, 1);
+}
+
+.loadMore:hover {
+	color: rgba(#fff, 1);
+	text-decoration: none;
+	background-color: rgba(#62B8EC, 1);
+}
+
+/******************************************************************************/
+/* .section__header */
+/******************************************************************************/
+.section__header {margin-bottom: 40px;}
+
+.section__header__title {
+	font-size: 2.6em;
+	font-weight: 900;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.section__header__tagline {
+	display: block;
+	font-size: 1.6em;
+	text-align: center;
+	color: rgba(#707B87, 1);
+}

@@ -1,0 +1,118 @@
+/******************************************************************************/
+/* .post */
+/******************************************************************************/
+.post article {margin-bottom: 50px;}
+
+/******************************************************************************/
+/* .post__intro */
+/******************************************************************************/
+.post__intro p {
+	font-size: 2.4em;
+	font-weight: 300;
+	line-height: 1.4em;
+	margin-bottom: 30px;
+}
+
+/******************************************************************************/
+/* .post__content */
+/******************************************************************************/
+.post__content h1,
+.post__content h2,
+.post__content h3,
+.post__content h4,
+.post__content h5,
+.post__content h6 {
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.post__content h1 {font-size: 2.4em;}
+.post__content h2 {font-size: 2.2em;}
+.post__content h3 {font-size: 2.0em;}
+.post__content h4 {font-size: 1.8em;}
+.post__content h5 {font-size: 1.6em;}
+.post__content h6 {font-size: 1.4em;}
+
+.post__content p {
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 1.5em;
+	color: rgba(#707B87 ,1);
+	margin-bottom: 25px;
+}
+
+.post__content p:last-child {margin-bottom: 0;}
+
+/***************************************************************/
+/* .post__quote */
+/***************************************************************/
+.post__quote {
+	padding: 15px;
+	border-left: 6px solid rgba(#E5E9ED ,1);
+	background-color: rgba(#F2F4F6 ,1);
+	margin-bottom: 20px;
+}
+
+.post__quote p {font-size: 2em;}
+
+.quote__author {
+	font-size: 1.4em;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.3em;
+	color: rgba(#707B87, 1);
+}
+
+/***************************************************************/
+/* .post__picture */
+/***************************************************************/
+.post__picture {margin-bottom: 20px;}
+
+.post__picture__img {
+	display: block;
+	width: 100%;
+	border: 1px solid rgba(#e6e6e6, 1);
+	margin-bottom: 5px;
+}
+
+.post__picture__caption {
+	display: block;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 300;
+	font-style: italic;
+}
+
+/******************************************************************************/
+/* .post__author */
+/******************************************************************************/
+.post__author {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.author__picture {
+	width: 140px;
+	height: 140px;
+	border-radius: 100% 100%;
+	overflow: hidden;
+	margin: 0 auto 10px auto;
+}
+
+.author_name {
+	display: block;
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+/******************************************************************************/
+/* .post__comment */
+/******************************************************************************/
+.post__comment {
+	font-size: 2em;
+	font-weight: 300;
+	padding: 20px;
+	color: rgba(#fff, 1);
+	background-color: rgba(#62b8ec ,1);
+}

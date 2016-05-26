@@ -1,0 +1,40 @@
+/******************************************************************************/
+/* .g-header */
+/******************************************************************************/
+.g-header {
+	position: relative;
+	background-color: rgba(#fff, 1);
+}
+
+.g-header .wrapper {padding: 0;}
+
+.g-header h1 {
+	padding: 15px;
+	text-align: center;
+	border-bottom: 1px solid rgba(#5E729E, 1);
+}
+
+.g-header h1 img {
+	height: 24px;
+}
+
+/******************************************************************************/
+/* .g-nav */
+/******************************************************************************/
+.g-nav a {
+	display: block;
+	padding: 15px;
+	border-bottom: 2px solid transparent;
+	color: rgba(#707B87, 1);
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.g-nav a:hover,
+.g-nav .active {
+	text-decoration: none;
+	color: rgba(#62B8EC, 1);
+	background-color: rgba(#f2f4f6,1);
+}
+
+.g-nav .active {border-bottom-color: rgba(#0896ff, 1);}

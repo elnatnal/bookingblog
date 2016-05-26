@@ -1,0 +1,35 @@
+/******************************************************************************/
+/* .bkbMainHeader */
+/******************************************************************************/
+.g-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	box-shadow: 0 1px 4px rgba(0,0,0, 0.3);
+}
+
+.g-header h1 {
+	position: relative;
+	top: 3px;
+	float: left;
+	text-align: left;
+	border-bottom-color: transparent;
+}
+/***************************************************************/
+/* .bkbMainNav */
+/***************************************************************/
+.g-nav {
+	float: right;
+}
+
+.g-nav a {
+	float: left;
+	padding: 22px;
+}
+
+.g-nav a:hover,
+.g-nav .active {
+	border-bottom: 3px solid rgba(#0896ff, 1);
+}
