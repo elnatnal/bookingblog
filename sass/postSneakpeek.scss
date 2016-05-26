@@ -28,6 +28,14 @@
 
 .post__time {text-transform: uppercase;}
 
+.post__category {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgba(#62b8ec, 1);
+}
+
 /***************************************************************/
 /* .post__preview */
 /***************************************************************/
