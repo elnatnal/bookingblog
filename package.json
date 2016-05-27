@@ -1,0 +1,15 @@
+{
+	"name": "booking-blog",
+	"version": "0.0.1",
+	"homepage": "http://blog.booking.com",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/elnatnal/bookingblog"
+	},
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-sass": "*",
+		"gulp-sourcemaps": "*",
+		"gulp-autoprefixer": "*"
+	}
+}
